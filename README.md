@@ -1,7 +1,7 @@
 # charts
 My collection of Helm Charts
 
-### Install instructions
+### Add repository to Helm
 ```shell
 helm repo add jeffresc https://charts.jeffresc.dev
 helm repo update
