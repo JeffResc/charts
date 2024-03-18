@@ -1,6 +1,6 @@
 apiVersion: v2
 name: esphome
-description: A Helm chart for Kubernetes
+description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
