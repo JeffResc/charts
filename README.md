@@ -8,4 +8,4 @@ helm repo update
 ```
 
 ### List of Charts
-- [ESPHome]([charts/esphome](https://github.com/JeffResc/charts/tree/main/charts/esphome)https://github.com/JeffResc/charts/tree/main/charts/esphome)
+- [ESPHome](https://github.com/JeffResc/charts/tree/main/charts/esphome)
