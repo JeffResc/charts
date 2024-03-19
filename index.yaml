@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  it-tools:
+  - apiVersion: v2
+    appVersion: 2023.12.21-5ed3693
+    created: "2024-03-19T03:39:28.91437915Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 73d36e1091df36adb55f53165cebf317eca1556a2da1c4db5bc08df1427e7c18
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-03-19T03:39:28.914411781Z"
