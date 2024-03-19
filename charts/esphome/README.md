@@ -123,3 +123,11 @@ helm uninstall esphome
 | `persistence.name`         | Persistent storage PVC name          | `esphome-config`  |
 | `persistence.storageClass` | Persistent storage PVC storage class | `my-storageclass` |
 | `persistence.size`         | Persistent storage PVC size          | `5Gi`             |
+
+## Changelog
+
+### 0.0.2
+Provided updated documentation
+
+### 0.0.1
+Initial release

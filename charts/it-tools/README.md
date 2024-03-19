@@ -107,3 +107,9 @@ helm uninstall it-tools
 | `autoscaling.maxReplicas`                       | Maximum number of replicas           | `100`   |
 | `autoscaling.targetCPUUtilizationPercentage`    | Target CPU utilization percentage    | `80`    |
 | `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage | `80`    |
+
+
+## Changelog
+
+### 0.0.1
+Initial release
