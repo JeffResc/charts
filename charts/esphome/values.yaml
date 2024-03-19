@@ -16,7 +16,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: true
+  create: false
   # Automatically mount a ServiceAccount's API credentials?
   automount: true
   # Annotations to add to the service account
@@ -30,8 +30,8 @@ podLabels: {}
 
 podSecurityContext:
   # Recommended to run as non-root
-  runAsUser: 1299
-  fsGroup: 1299
+  runAsUser: 10099
+  fsGroup: 10099
 
 securityContext:
   capabilities:
@@ -40,8 +40,11 @@ securityContext:
   readOnlyRootFilesystem: true
   # Recommended to run as non-root
   runAsNonRoot: true
-  runAsUser: 1299
-  runAsGroup: 1299
+  runAsUser: 10099
+  runAsGroup: 10099
+  allowPrivilegeEscalation: false
+  seccompProfile:
+    type: RuntimeDefault
 
 service:
   type: ClusterIP
