@@ -1,6 +1,13 @@
 apiVersion: v2
 name: esphome
-description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
+description: >
+  ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
+icon: https://avatars.githubusercontent.com/u/45919759
+sources:
+  - https://github.com/esphome/esphome
+maintainers:
+  - name: Jeff Rescignano
+    email: jeff@jeffresc.dev
 
 # A chart can be either an 'application' or a 'library' chart.
 #
