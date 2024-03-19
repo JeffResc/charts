@@ -99,8 +99,6 @@ ingress:
   enabled: false
   className: ""
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
   hosts: []
   tls: []
 
@@ -140,5 +138,3 @@ persistence:
   name: "esphome-config"
   storageClass: "my-storageclass"
   size: "5Gi"
-
-
