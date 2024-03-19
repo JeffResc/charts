@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 ## @section Global parameters
-## @param replicaCount Number of replicas of the ESPHome StatefulSet
+## @param replicaCount Number of replicas of the it-tools Deployment
 replicaCount: 1
 
 ## @param affinity Affinity for pod assignment
@@ -37,7 +37,7 @@ fullnameOverride: ""
 ## @param image.pullPolicy Docker image pull policy
 ## @param image.tag Overrides the image tag whose default is the chart appVersion
 image:
-  repository: ghcr.io/esphome/esphome
+  repository: ghcr.io/corentinth/it-tools
   pullPolicy: IfNotPresent
   tag: ""
 

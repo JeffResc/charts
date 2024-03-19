@@ -12,7 +12,7 @@ This chart is not maintained by the upstream project and any issues with the cha
 ```
 helm repo add jeffresc https://charts.jeffresc.dev
 helm repo update
-helm install esphome jeffresc/it-tools
+helm install it-tools jeffresc/it-tools
 ```
 
 ## Installing the Chart
@@ -33,7 +33,7 @@ helm uninstall it-tools
 
 | Name               | Description                                   | Value |
 | ------------------ | --------------------------------------------- | ----- |
-| `replicaCount`     | Number of replicas of the ESPHome StatefulSet | `1`   |
+| `replicaCount`     | Number of replicas of the it-tools Deployment | `1`   |
 | `affinity`         | Affinity for pod assignment                   | `{}`  |
 | `nodeSelector`     | Node labels for pod assignment                | `{}`  |
 | `tolerations`      | Tolerations for pod assignment                | `[]`  |
@@ -45,11 +45,11 @@ helm uninstall it-tools
 
 ### Image parameters
 
-| Name               | Description                                                   | Value                     |
-| ------------------ | ------------------------------------------------------------- | ------------------------- |
-| `image.repository` | Docker image repository                                       | `ghcr.io/esphome/esphome` |
-| `image.pullPolicy` | Docker image pull policy                                      | `IfNotPresent`            |
-| `image.tag`        | Overrides the image tag whose default is the chart appVersion | `""`                      |
+| Name               | Description                                                   | Value                         |
+| ------------------ | ------------------------------------------------------------- | ----------------------------- |
+| `image.repository` | Docker image repository                                       | `ghcr.io/corentinth/it-tools` |
+| `image.pullPolicy` | Docker image pull policy                                      | `IfNotPresent`                |
+| `image.tag`        | Overrides the image tag whose default is the chart appVersion | `""`                          |
 
 ### Service account parameters
 
