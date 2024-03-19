@@ -3,6 +3,24 @@ entries:
   esphome:
   - apiVersion: v2
     appVersion: 2024.2.2
+    created: "2024-03-19T03:09:36.999030233Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 247942777b581c0a154570815e7aa45267fee6b1da2be651affbfc42eac7df91
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 2024.2.2
     created: "2024-03-18T07:25:05.063974416Z"
     description: ESPHome is a system to control your microcontrollers by simple yet
       powerful configuration files and control them remotely through Home Automation
@@ -13,4 +31,21 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/esphome-0.0.1/esphome-0.0.1.tgz
     version: 0.0.1
-generated: "2024-03-18T07:25:05.063988362Z"
+  it-tools:
+  - apiVersion: v2
+    appVersion: 2023.12.21-5ed3693
+    created: "2024-03-19T03:09:37.111322839Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 834cebd4a8cd0a9a89a7d95928499725e3cee3bc5b30e3284957c4bd8a721adc
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-03-19T03:09:37.111331546Z"
