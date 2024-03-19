@@ -20,7 +20,27 @@ helm repo update
 ```
 
 ## Available Charts
-| **Chart**                                                                | **Chart Version** | **App Version**    | **Description**                                                                                                                                            |
-|--------------------------------------------------------------------------|-------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [esphome](https://github.com/JeffResc/charts/tree/main/charts/esphome)   | 0.0.1             | 2024.2.2           | ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems. |
-| [it-tools](https://github.com/JeffResc/charts/tree/main/charts/it-tools) | 0.0.1             | 2023.12.21-5ed3693 | Collection of handy online tools for developers, with great UX                                                                                             |
+<table>
+<thead>
+<tr class="header">
+<th><strong>Chart</strong></th>
+<th><strong>Chart Version</strong></th>
+<th><strong>App Version</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
+<td markdown="span">0.0.1</td>
+<td markdown="span">2024.2.2</td>
+<td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
+</tr>
+<tr>
+<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/it-tools">it-tools</a></td>
+<td markdown="span">0.0.1</td>
+<td markdown="span">2023.12.21-5ed3693</td>
+<td markdown="span">Collection of handy online tools for developers, with great UX</td>
+</tr>
+</tbody>
+</table>
