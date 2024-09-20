@@ -108,8 +108,25 @@ helm uninstall it-tools
 | `autoscaling.targetCPUUtilizationPercentage`    | Target CPU utilization percentage    | `80`    |
 | `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage | `80`    |
 
+### Nginx configuration parameters
+| Name                          | Description                                               | Value |
+|-------------------------------|-----------------------------------------------------------|-------|
+| `nginxConf.existingConfigmap` | Provide an existing ConfigMap for the Nginx configuration | `""`  |
+
+### Extra volumes parameter
+| Name           | Description                            | Value |
+|----------------|----------------------------------------|-------|
+| `extraVolumes` | Provide extra volumes for the main pod | `[]`  |
+
+### Extra containers parameter
+| Name              | Description                               | Value |
+|-------------------|-------------------------------------------|-------|
+| `extraContainers` | Provide extra containers for the main pod | `[]`  |
 
 ## Changelog
+
+### 0.0.2
+Add support for nginxConf.existingConfigmap, extraVolumes, extraContainers
 
 ### 0.0.1
 Initial release

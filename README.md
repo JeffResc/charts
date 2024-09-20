@@ -38,7 +38,7 @@ helm repo update
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/it-tools">it-tools</a></td>
-<td markdown="span">0.0.1</td>
+<td markdown="span">0.0.2</td>
 <td markdown="span">2023.12.21-5ed3693</td>
 <td markdown="span">Collection of handy online tools for developers, with great UX</td>
 </tr>
