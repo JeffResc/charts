@@ -62,14 +62,20 @@ spec:
             - name: conf 
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
+        {{- if .Values.extraContainers }}
+        {{- toYaml .Values.extraContainers | nindent 8 }}
+        {{- end }}
       volumes:
         - name: cache
           emptyDir: {}
         - name: tmp
           emptyDir: {}
         - name: conf
-          configMap: 
-            name: nginx-conf
+          configMap:
+            name: {{ default "nginx-conf" .Values.nginxConf.existingConfigmap }}
+        {{- if .Values.extraVolumes }}
+        {{- toYaml .Values.extraVolumes | nindent 8 }}
+        {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

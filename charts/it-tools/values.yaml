@@ -72,6 +72,8 @@ securityContext:
   seccompProfile:
     type: RuntimeDefault
 
+podSecurityContext: {}
+
 ## @section Service parameters
 ## @param service.type Service type to create
 ## @param service.port Service port to use
@@ -120,3 +122,22 @@ autoscaling:
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 80
+
+## @section Nginx configuration parameters
+## Nginx configuration parameters
+## @param nginxConf.existingConfigmap Provide an existing ConfigMap for the Nginx configuration 
+##
+nginxConf:
+  existingConfigmap: ""
+
+## @section Extra volumes parameter
+## Extra volumes parameter
+## @param extraVolumes Provide extra volumes for the main pod 
+##
+extraVolumes: []
+
+## @section Extra containers parameter
+## Extra containers parameter
+## @param extraContainers Provide extra containers for the main pod 
+##
+extraContainers: []
