@@ -41,6 +41,32 @@ image:
   pullPolicy: IfNotPresent
   tag: ""
 
+## @section Metrics parameters
+## @param metrics.enabled Enables metrics
+## @param metrics.containerName Nginx Prometheus exporter container name
+## @param metrics.image.repository Metrics Docker image repository
+## @param metrics.image.pullPolicy MetricsDocker image pull policy
+## @param metrics.image.tag Overrides the metrics image tag
+## @param metrics.args Metrics container command arguments
+## @param metrics.port Metrics port number
+## @param metrics.portName Metrics port name
+## @param metrics.resources.requests.cpu Minimum CPU requested
+## @param metrics.resources.requests.memory Minimum memory requested
+## @extra metrics.resources.limits.cpu Maximum CPU allowed
+## @extra metrics.resources.limits.memory Maximum memory allowed
+metrics:
+  enabled: true
+  containerName: nginx-prometheus-exporter
+  image:
+    repository: nginx/nginx-prometheus-exporter
+    pullPolicy: IfNotPresent
+    tag: "1.3.0"
+  args:
+    - --nginx.scrape-uri=http://localhost:8080/stub_status
+  port: 9113
+  portName: metrics
+  resources: {}
+
 ## @section Service account parameters
 ## @param serviceAccount.create Specifies whether a service account should be created
 ## @param serviceAccount.automount Automatically mount a ServiceAccount's API credentials?

@@ -62,6 +62,33 @@ spec:
             - name: conf 
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
+        {{- if .Values.metrics.enabled }}
+        - name: {{ .Values.metrics.containerName }}
+          image: "{{ .Values.metrics.image.repository }}:{{ .Values.metrics.image.tag }}"
+          imagePullPolicy: {{ .Values.metrics.image.pullPolicy }}
+          args: {{- toYaml .Values.metrics.args | nindent 12 }}
+          ports:
+            - name: {{ .Values.metrics.portName }}
+              containerPort: {{ .Values.metrics.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /metrics
+              port: {{ .Values.metrics.port }}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: {{ .Values.metrics.port }}
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            timeoutSeconds: 2
+            failureThreshold: 3
+          resources: {{- toYaml .Values.metrics.resources | nindent 12 }}
+        {{- end }}
         {{- if .Values.extraContainers }}
         {{- toYaml .Values.extraContainers | nindent 8 }}
         {{- end }}
