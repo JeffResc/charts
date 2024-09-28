@@ -11,14 +11,14 @@ data:
     pid        /tmp/nginx/nginx.pid;
 
     events { 
-      worker_connections  1024; 
+    worker_connections  1024; 
     }
 
     http {
         include /etc/nginx/mime.types;
         
         server {
-            listen 80;
+            listen 8080;
             server_name _;
             root /usr/share/nginx/html;
             index index.html;
@@ -27,5 +27,18 @@ data:
                 try_files $uri $uri/ /index.html;
             }
         }
+
+        {{- if .Values.metrics.enabled }}
+        server {
+            listen 8081;
+            server_name _;
+
+            location /stub_status {
+                stub_status;
+                allow 127.0.0.1;
+                deny all;
+            }
+        }
+        {{- end }}
     }
 {{- end }}
