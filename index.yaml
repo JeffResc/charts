@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   esphome:
   - apiVersion: v2
+    appVersion: 2024.9.1
+    created: "2024-09-28T21:49:54.388482265Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 44563555ac67db12dd7a06be2e8ab7cd9a0ba891a9bce72b207b9ba5712fe7ce
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.0.3/esphome-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
     appVersion: 2024.2.2
     created: "2024-03-19T03:43:25.938723485Z"
     description: ESPHome is a system to control your microcontrollers by simple yet
@@ -20,6 +38,22 @@ entries:
     - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
     version: 0.0.2
   it-tools:
+  - apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-09-28T21:49:54.549210598Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 263b3b6fa7a33c84001361f69015950b859e088da49c1e965b22c42020e290c3
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.3/it-tools-0.0.3.tgz
+    version: 0.0.3
   - apiVersion: v2
     appVersion: 2024.5.13-a0bc346
     created: "2024-09-20T14:48:26.58294546Z"
@@ -52,4 +86,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
     version: 0.0.1
-generated: "2024-09-20T14:48:26.582957593Z"
+generated: "2024-09-28T21:49:54.549230856Z"
