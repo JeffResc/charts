@@ -59,7 +59,7 @@ helm uninstall it-tools
 | `metrics.image.repository`                         | Metrics Docker image repository           | `nginx/nginx-prometheus-exporter`                          |
 | `metrics.image.pullPolicy`                         | Metrics Docker image pull policy          | `IfNotPresent`                                             |
 | `metrics.image.tag`                                | Overrides the metrics image tag           | `"1.3.0"`                                                  |
-| `metrics.args`                                     | Metrics container command arguments       | `["--nginx.scrape-uri=http://localhost:8080/stub_status"]` |
+| `metrics.args`                                     | Metrics container command arguments       | `["--nginx.scrape-uri=http://localhost:8081/stub_status"]` |
 | `metrics.port`                                     | Metrics port number                       | `9113`                                                     |
 | `metrics.portName`                                 | Metrics port name                         | `metrics`                                                  |
 | `metrics.resources.requests.cpu`                   | Minimum CPU requested                     |                                                            |
@@ -97,10 +97,10 @@ helm uninstall it-tools
 
 ### Service parameters
 
-| Name           | Description            | Value       |
-| -------------- | ---------------------- | ----------- |
-| `service.type` | Service type to create | `ClusterIP` |
-| `service.port` | Service port to use    | `80`        |
+| Name           | Description            | Value         |
+| -------------- | ---------------------- | ------------- |
+| `service.type` | Service type to create | `ClusterIP`   |
+| `service.port` | Service port to use    | `8080`        |
 
 ### Ingress parameters
 
@@ -151,6 +151,7 @@ helm uninstall it-tools
 ### 0.0.3
 - Add metrics support
 - Remove default resources
+- Change default port to 8080
 
 ### 0.0.2
 - Add support for nginxConf.existingConfigmap, extraVolumes, extraContainers

@@ -69,7 +69,7 @@ metrics:
     pullPolicy: IfNotPresent
     tag: "1.3.0"
   args:
-    - --nginx.scrape-uri=http://localhost:8080/stub_status
+    - --nginx.scrape-uri=http://localhost:8081/stub_status
   port: 9113
   portName: metrics
   resources: {}
@@ -123,7 +123,7 @@ podSecurityContext: {}
 ## @param service.port Service port to use
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
 
 ## @section Ingress parameters
 ## Configure the ingress resource that allows you to access the Apache installation
