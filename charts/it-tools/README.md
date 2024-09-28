@@ -45,11 +45,34 @@ helm uninstall it-tools
 
 ### Image parameters
 
-| Name               | Description                                                   | Value                         |
-| ------------------ | ------------------------------------------------------------- | ----------------------------- |
-| `image.repository` | Docker image repository                                       | `ghcr.io/corentinth/it-tools` |
-| `image.pullPolicy` | Docker image pull policy                                      | `IfNotPresent`                |
-| `image.tag`        | Overrides the image tag whose default is the chart appVersion | `""`                          |
+| Name               | Description                                                      | Value                         |
+| ------------------ | ---------------------------------------------------------------- | ----------------------------- |
+| `image.repository` | Container image repository                                       | `ghcr.io/corentinth/it-tools` |
+| `image.pullPolicy` | Container image pull policy                                      | `IfNotPresent`                |
+| `image.tag`        | Overrides the image tag whose default is the chart appVersion    | `""`                          |
+
+### Metrics parameters
+| Name                                               | Description                               | Default Value                                              |
+|----------------------------------------------------|-------------------------------------------|------------------------------------------------------------|
+| `metrics.enabled`                                  | Enables metrics                           | `false`                                                    |
+| `metrics.containerName`                            | Nginx Prometheus exporter container name  | `nginx-prometheus-exporter`                                |
+| `metrics.image.repository`                         | Metrics Docker image repository           | `nginx/nginx-prometheus-exporter`                          |
+| `metrics.image.pullPolicy`                         | Metrics Docker image pull policy          | `IfNotPresent`                                             |
+| `metrics.image.tag`                                | Overrides the metrics image tag           | `"1.3.0"`                                                  |
+| `metrics.args`                                     | Metrics container command arguments       | `["--nginx.scrape-uri=http://localhost:8080/stub_status"]` |
+| `metrics.port`                                     | Metrics port number                       | `9113`                                                     |
+| `metrics.portName`                                 | Metrics port name                         | `metrics`                                                  |
+| `metrics.resources.requests.cpu`                   | Minimum CPU requested                     |                                                            |
+| `metrics.resources.requests.memory`                | Minimum memory requested                  |                                                            |
+| `metrics.resources.limits.cpu`                     | Maximum CPU allowed                       |                                                            |
+| `metrics.resources.limits.memory`                  | Maximum memory allowed                    |                                                            |
+| `metrics.securityContext.capabilities.drop`        | Capabilities to drop                      |                                                            |
+| `metrics.securityContext.readOnlyRootFilesystem`   | If root filesystem should be read-only    |                                                            |
+| `metrics.securityContext.runAsNonRoot`             | If container should be run as non-root    |                                                            |
+| `metrics.securityContext.runAsUser`                | User to run container as                  |                                                            |
+| `metrics.securityContext.runAsGroup`               | Group to run container as                 |                                                            |
+| `metrics.securityContext.allowPrivilegeEscalation` | If privilege escalation should be allowed |                                                            |
+| `metrics.securityContext.seccompProfile.type`      | seccomp profile type                      |                                                            |
 
 ### Service account parameters
 
@@ -62,15 +85,15 @@ helm uninstall it-tools
 
 ### Security context parameters
 
-| Name                                       | Description                               | Value            |
-| ------------------------------------------ | ----------------------------------------- | ---------------- |
-| `securityContext.capabilities.drop`        | Capabilities to drop                      | `["ALL"]`        |
-| `securityContext.readOnlyRootFilesystem`   | If root filesystem should be read-only    | `true`           |
-| `securityContext.runAsNonRoot`             | If pod should be run as non-root          | `true`           |
-| `securityContext.runAsUser`                | User to run pod as                        | `10099`          |
-| `securityContext.runAsGroup`               | Group to run pod as                       | `10099`          |
-| `securityContext.allowPrivilegeEscalation` | If privilege escalation should be allowed | `false`          |
-| `securityContext.seccompProfile.type`      | seccomp profile type                      | `RuntimeDefault` |
+| Name                                       | Description                                     | Value            |
+| ------------------------------------------ | ----------------------------------------------- | ---------------- |
+| `securityContext.capabilities.drop`        | Capabilities to drop                            | `["ALL"]`        |
+| `securityContext.readOnlyRootFilesystem`   | If root filesystem should be read-only          | `true`           |
+| `securityContext.runAsNonRoot`             | If container should be run as non-root          | `true`           |
+| `securityContext.runAsUser`                | User to run container as                        | `10099`          |
+| `securityContext.runAsGroup`               | Group to run container as                       | `10099`          |
+| `securityContext.allowPrivilegeEscalation` | If privilege escalation should be allowed       | `false`          |
+| `securityContext.seccompProfile.type`      | seccomp profile type                            | `RuntimeDefault` |
 
 ### Service parameters
 
@@ -93,8 +116,8 @@ helm uninstall it-tools
 
 | Name                        | Description              | Value  |
 | --------------------------- | ------------------------ | ------ |
-| `resources.requests.cpu`    | Minimum CPU requested    | `10m`  |
-| `resources.requests.memory` | Minimum memory requested | `16Mi` |
+| `resources.requests.cpu`    | Minimum CPU requested    |        |
+| `resources.requests.memory` | Minimum memory requested |        |
 | `resources.limits.cpu`      | Maximum CPU allowed      |        |
 | `resources.limits.memory`   | Maximum memory allowed   |        |
 
@@ -125,8 +148,12 @@ helm uninstall it-tools
 
 ## Changelog
 
+### 0.0.3
+- Add metrics support
+- Remove default resources
+
 ### 0.0.2
-Add support for nginxConf.existingConfigmap, extraVolumes, extraContainers
+- Add support for nginxConf.existingConfigmap, extraVolumes, extraContainers
 
 ### 0.0.1
-Initial release
+- Initial release

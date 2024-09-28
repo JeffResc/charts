@@ -33,8 +33,8 @@ nameOverride: ""
 fullnameOverride: ""
 
 ## @section Image parameters
-## @param image.repository Docker image repository
-## @param image.pullPolicy Docker image pull policy
+## @param image.repository Container image repository
+## @param image.pullPolicy Container image pull policy
 ## @param image.tag Overrides the image tag whose default is the chart appVersion
 image:
   repository: ghcr.io/corentinth/it-tools
@@ -44,8 +44,8 @@ image:
 ## @section Metrics parameters
 ## @param metrics.enabled Enables metrics
 ## @param metrics.containerName Nginx Prometheus exporter container name
-## @param metrics.image.repository Metrics Docker image repository
-## @param metrics.image.pullPolicy MetricsDocker image pull policy
+## @param metrics.image.repository Metrics Container image repository
+## @param metrics.image.pullPolicy Metrics Container image pull policy
 ## @param metrics.image.tag Overrides the metrics image tag
 ## @param metrics.args Metrics container command arguments
 ## @param metrics.port Metrics port number
@@ -54,8 +54,15 @@ image:
 ## @param metrics.resources.requests.memory Minimum memory requested
 ## @extra metrics.resources.limits.cpu Maximum CPU allowed
 ## @extra metrics.resources.limits.memory Maximum memory allowed
+## @param metrics.securityContext.capabilities.drop Capabilities to drop
+## @param metrics.securityContext.readOnlyRootFilesystem If root filesystem should be read-only
+## @param metrics.securityContext.runAsNonRoot If pod should be run as non-root
+## @param metrics.securityContext.runAsUser User to run pod as
+## @param metrics.securityContext.runAsGroup Group to run pod as
+## @param metrics.securityContext.allowPrivilegeEscalation If privilege escalation should be allowed
+## @param metrics.securityContext.seccompProfile.type seccomp profile type
 metrics:
-  enabled: true
+  enabled: false
   containerName: nginx-prometheus-exporter
   image:
     repository: nginx/nginx-prometheus-exporter
@@ -66,6 +73,17 @@ metrics:
   port: 9113
   portName: metrics
   resources: {}
+  securityContext:
+    capabilities:
+      drop:
+      - ALL
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+    runAsUser: 10099
+    runAsGroup: 10099
+    allowPrivilegeEscalation: false
+    seccompProfile:
+      type: RuntimeDefault
 
 ## @section Service account parameters
 ## @param serviceAccount.create Specifies whether a service account should be created
@@ -81,9 +99,9 @@ serviceAccount:
 ## @section Security context parameters
 ## @param securityContext.capabilities.drop Capabilities to drop
 ## @param securityContext.readOnlyRootFilesystem If root filesystem should be read-only
-## @param securityContext.runAsNonRoot If pod should be run as non-root
-## @param securityContext.runAsUser User to run pod as
-## @param securityContext.runAsGroup Group to run pod as
+## @param securityContext.runAsNonRoot If container should be run as non-root
+## @param securityContext.runAsUser User to run container as
+## @param securityContext.runAsGroup Group to run container as
 ## @param securityContext.allowPrivilegeEscalation If privilege escalation should be allowed
 ## @param securityContext.seccompProfile.type seccomp profile type
 securityContext:
