@@ -102,10 +102,7 @@ ingress:
 ## @param resources.requests.memory Minimum memory requested
 ## @extra resources.limits.cpu Maximum CPU allowed
 ## @extra resources.limits.memory Maximum memory allowed
-resources:
-  requests:
-    cpu: 10m
-    memory: 16Mi
+resources: {}
 
 ## @section Autoscaling parameters
 ## Autoscaling parameters
