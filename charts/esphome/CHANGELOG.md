@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.0) (2025-02-14)
+
+
+### Bug Fixes
+
+* clear changelog ([a6067fe](https://github.com/JeffResc/charts/commit/a6067fec32e3b8caca4a80c5c8a0e180d26d4a8a))
+* renovate appVersion regex ([5b99845](https://github.com/JeffResc/charts/commit/5b99845316a1da796a09b17161402a1a4e67495c))
+* structure ([03bd5d7](https://github.com/JeffResc/charts/commit/03bd5d7e2e3a3c2d6ff00fd538830a136cef88ce))
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2024.12.4 ([8db64be](https://github.com/JeffResc/charts/commit/8db64be18b4e436bd89b2f46440340c198d989dd))
+* **main:** release esphome 0.1.0 ([835d9d6](https://github.com/JeffResc/charts/commit/835d9d66c6f3ccd0b848e42bda41a1e61792d2b1))
+* **main:** release esphome 0.1.0 ([0b91481](https://github.com/JeffResc/charts/commit/0b91481ad27d888b20922487da9d18940bcdd6f9))
+* **main:** release esphome 0.1.1 ([5dbedaa](https://github.com/JeffResc/charts/commit/5dbedaaeb9c008522e254fb6606b91c6df326c1d))
+* release 0.1.0 ([762da44](https://github.com/JeffResc/charts/commit/762da44d0c15823893f1bc8ac8de56a3f7ee69c7))
+* release 0.1.0 ([4db58da](https://github.com/JeffResc/charts/commit/4db58da5d13f007e05157800708aba07445c394d))
+* release 0.1.0 ([d255302](https://github.com/JeffResc/charts/commit/d25530297f86d4c94d5d2eabc44ff0f227ff65b3))
+* **renovate:** configure appVersion ([ecc2b6a](https://github.com/JeffResc/charts/commit/ecc2b6a97b7e3e72646c3f48db5dc0a94dcf54d6))
+* **renovate:** detect appVersion ([85493ae](https://github.com/JeffResc/charts/commit/85493ae015393bc5ac742aad65e41013ed3ff47f))
+
 ## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.1...esphome-v0.1.0) (2025-02-14)
 
 
