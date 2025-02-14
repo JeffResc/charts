@@ -8,7 +8,6 @@
         "path": "charts/it-tools",
         "release-type": "helm"
       }
-    },
-    "monorepo-tags": true
+    }
   }
   

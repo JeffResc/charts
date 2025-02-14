@@ -21,6 +21,4 @@ jobs:
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: helm
-          monorepo-tags: true
           manifest-file: release-please-config.json
