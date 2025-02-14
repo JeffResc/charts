@@ -1,10 +1,17 @@
-name: Publish Helm Charts
+name: Release
 
 on:
-  push:
-    tags:
-      - '*-v*'
+  release:
+    types:
+      - published
   workflow_dispatch:
+    inputs:
+      chart_name:
+        description: "Helm Chart Name (e.g., it-tools, esphome)"
+        required: true
+      chart_version:
+        description: "Chart Version (e.g., 0.1.0)"
+        required: true
 
 jobs:
   release-helm:
@@ -15,17 +22,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for proper versioning
+          fetch-depth: 0
 
       - name: Setup Helm
         uses: azure/setup-helm@v4
 
-      - name: Extract Chart Name and Version from Tag
+      - name: Extract Chart Name and Version
         id: parse_tag
         run: |
-          RELEASE_TAG="${{ github.ref_name }}"
-          CHART_NAME=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $1}')
-          CHART_VERSION=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $NF}')
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            RELEASE_TAG="${{ github.event.release.tag_name }}"
+            CHART_NAME=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $1}')
+            CHART_VERSION=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $NF}')
+          else
+            CHART_NAME="${{ github.event.inputs.chart_name }}"
+            CHART_VERSION="${{ github.event.inputs.chart_version }}"
+          fi
 
           echo "Chart Name: $CHART_NAME"
           echo "Chart Version: $CHART_VERSION"
@@ -38,29 +50,35 @@ jobs:
           mkdir -p packaged-charts
           helm package charts/${{ env.chart_name }} -d packaged-charts/
 
-      - name: Upload Helm Chart to Existing GitHub Release
-        run: |
-          RELEASE_ID=$(gh release view ${{ github.event.release.tag_name }} --json id --jq '.id')
-          for file in packaged-charts/*.tgz; do
-            echo "Uploading $file to release $RELEASE_ID"
-            gh api \
-              --method POST \
-              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-              -H "Content-Type: application/octet-stream" \
-              --data-binary @"$file" \
-              "https://uploads.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID/assets?name=$(basename "$file")"
-          done
+      - name: Upload Helm Chart to GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            RELEASE_ID=$(gh release view ${{ github.event.release.tag_name }} --json id --jq '.id')
+            for file in packaged-charts/*.tgz; do
+              echo "Uploading $file to release $RELEASE_ID"
+              gh api \
+                --method POST \
+                -H "Authorization: Bearer $GITHUB_TOKEN" \
+                -H "Content-Type: application/octet-stream" \
+                --data-binary @"$file" \
+                "https://uploads.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID/assets?name=$(basename "$file")"
+            done
+          else
+            echo "Skipping release upload in manual mode"
+          fi
 
       - name: Update Helm Index.yaml in gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          RELEASE_URL="https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/download/${{ env.chart_name }}-v${{ env.chart_version }}/"
 
           # Clone gh-pages branch
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
-          git clone --depth=1 --branch=gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
+          git clone --depth=1 --branch=gh-pages https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }}.git gh-pages
           cd gh-pages
 
           # Generate new index.yaml referencing release assets
@@ -70,5 +88,3 @@ jobs:
           git add index.yaml
           git commit -m "Update Helm index.yaml for ${{ env.chart_name }} v${{ env.chart_version }}"
           git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
