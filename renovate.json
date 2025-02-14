@@ -16,23 +16,16 @@
       "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
       "matchStrings": ["^version:\\s?(?<currentValue>.+)$"],
       "depNameTemplate": "helm-chart",
-      "datasourceTemplate": "helm",
+      "datasourceTemplate": "docker",
       "versioningTemplate": "semver"
     }
   ],
-  "helm": {
-    "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
-    "bumpVersion": "patch",
-    "separateMinorPatch": false
-  },
   "packageRules": [
     {
-      "matchDatasources": ["helm"],
-      "matchFiles": ["^charts\\/.*\\/Chart\\.yaml$"],
-      "versioning": "semver",
+      "matchDepNames": ["helm-chart"],
       "bumpVersion": "patch",
-      "automerge": false,
-      "automergeType": "branch"
+      "recreateClosed": true,
+      "automerge": false
     }
   ]
 }
