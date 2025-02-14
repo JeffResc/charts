@@ -8,6 +8,7 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  serviceName: {{ include "esphome.fullname" . }}
   selector:
     matchLabels:
       {{- include "esphome.selectorLabels" . | nindent 6 }}

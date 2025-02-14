@@ -1,0 +1,52 @@
+name: Lint and Validate Helm Charts
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  helm-lint:
+    name: Helm Lint & Schema Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Lint Helm Charts
+        run: |
+          for chart in charts/*; do
+            if [ -d "$chart" ]; then
+              echo "Linting $chart..."
+              helm lint "$chart"
+            fi
+          done
+
+  k8s-schema-check:
+    name: Validate Helm Manifests Against Kubernetes API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+
+      - name: Install kubeconform
+        run: |
+          curl -LO https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz
+          tar -xzf kubeconform-linux-amd64.tar.gz
+          chmod +x kubeconform
+          sudo mv kubeconform /usr/local/bin/
+
+      - name: Validate Helm templates
+        run: |
+          for chart in charts/*; do
+            if [ -d "$chart" ]; then
+              echo "Validating $chart..."
+              helm template "$chart" | kubeconform -strict -summary
+            fi
+          done
