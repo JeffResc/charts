@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "forkProcessing": "enabled",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [":semanticCommits", ":semanticCommitTypeAll(chore)"]
+}
