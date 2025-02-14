@@ -1,13 +1,15 @@
 {
-    "packages": {
-      "esphome": {
-        "path": "charts/esphome",
-        "release-type": "helm"
-      },
-      "it-tools": {
-        "path": "charts/it-tools",
-        "release-type": "helm"
-      }
+  "include-component-in-tag": true,
+  "packages": {
+    "esphome": {
+      "path": "charts/esphome",
+      "release-type": "helm",
+      "include-component-in-tag": true
+    },
+    "it-tools": {
+      "path": "charts/it-tools",
+      "release-type": "helm",
+      "include-component-in-tag": true
     }
   }
-  
+}
