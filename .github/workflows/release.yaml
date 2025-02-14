@@ -81,8 +81,14 @@ jobs:
           git clone --depth=1 --branch=gh-pages https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }}.git gh-pages
           cd gh-pages
 
-          # Generate new index.yaml referencing release assets
-          helm repo index . --url "$RELEASE_URL"
+          # Ensure we have the latest index.yaml
+          if [ -f "index.yaml" ]; then
+            echo "Existing index.yaml found, merging..."
+            helm repo index . --url "$RELEASE_URL" --merge index.yaml
+          else
+            echo "No existing index.yaml found, creating a new one."
+            helm repo index . --url "$RELEASE_URL"
+          fi
 
           # Commit and push updated index.yaml
           git add index.yaml
