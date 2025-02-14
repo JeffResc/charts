@@ -2,5 +2,16 @@
   "enabled": true,
   "forkProcessing": "enabled",
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [":semanticCommits", ":semanticCommitTypeAll(chore)"]
+  "extends": [":semanticCommits", ":semanticCommitTypeAll(chore)"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Chart\\.yaml$"],
+      "matchStrings": [
+        "appVersion:\\s*\"?(?<currentValue>[^\"\\s]+)\"?\\s*#\\s*renovate:\\s*depName=(?<depName>\\S+)\\s+datasource=(?<datasource>\\S+)"
+      ],
+      "depNameTemplate": "{{depName}}",
+      "datasourceTemplate": "{{datasource}}",
+      "versioningTemplate": "docker"
+    }
+  ]
 }
