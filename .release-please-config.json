@@ -6,21 +6,19 @@
     { "type": "fix", "section": "Bug Fixes", "hidden": false },
     { "type": "chore", "section": "Miscellaneous", "hidden": false }
   ],
+  "changelog-path": "CHANGELOG.md",
+  "draft": false,
   "versioning": "default",
   "bump-minor-pre-major": true,
   "packages": {
     "charts/esphome": {
       "release-type": "helm",
-      "draft": false,
-      "changelog-path": "charts/esphome/CHANGELOG.md",
       "path": "charts/esphome",
       "component": "esphome",
       "tag-separator": "-"
     },
     "charts/it-tools": {
       "release-type": "helm",
-      "draft": false,
-      "changelog-path": "charts/it-tools/CHANGELOG.md",
       "path": "charts/it-tools",
       "component": "it-tools",
       "tag-separator": "-"
