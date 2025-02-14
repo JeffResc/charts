@@ -5,7 +5,7 @@
   "extends": [":semanticCommits", ":semanticCommitTypeAll(chore)"],
   "regexManagers": [
     {
-      "fileMatch": ["^Chart\\.yaml$"],
+      "fileMatch": ["^charts/.*/Chart\\.yaml$"],
       "matchStrings": [
         "appVersion:\\s*\"?(?<currentValue>[^\"]+)\"?\\s*#\\s*renovate:\\s*image=(?<depName>[^\\s]+)"
       ],
