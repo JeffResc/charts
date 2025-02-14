@@ -1,4 +1,4 @@
 {
-  "esphome": "0.0.3",
-  "it-tools": "0.0.3"
+  "charts/esphome": "0.0.3",
+  "charts/it-tools": "0.0.3"
 }

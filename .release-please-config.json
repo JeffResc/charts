@@ -1,24 +1,24 @@
 {
+  "release-type": "manifest",
   "branches": [
     {
-      "branch": "main",
-      "release-type": "manifest",
-      "packages": {
-        "esphome": {
-          "release-type": "helm",
-          "path": "charts/esphome",
-          "component": "esphome",
-          "bump-minor-pre-major": true,
-          "tag-separator": "-"
-        },
-        "it-tools": {
-          "release-type": "helm",
-          "path": "charts/it-tools",
-          "component": "it-tools",
-          "bump-minor-pre-major": true,
-          "tag-separator": "-"
-        }
-      }
+      "branch": "main"
     }
-  ]
+  ],
+  "packages": {
+    "charts/esphome": {
+      "release-type": "helm",
+      "path": "charts/esphome",
+      "component": "esphome",
+      "tag-separator": "-",
+      "bump-minor-pre-major": true
+    },
+    "charts/it-tools": {
+      "release-type": "helm",
+      "path": "charts/it-tools",
+      "component": "it-tools",
+      "tag-separator": "-",
+      "bump-minor-pre-major": true
+    }
+  }
 }
