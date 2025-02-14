@@ -11,6 +11,20 @@
       "depNameTemplate": "{{depName}}",
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
+    },
+    {
+      "fileMatch": ["charts/.*/Chart\\.yaml$"],
+      "matchStrings": ["^version:\\s?(?<currentValue>.+)$"],
+      "depNameTemplate": "helm-chart",
+      "versioning": "helm"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["helm-chart"],
+      "versioning": "helm",
+      "semanticCommitType": "fix",
+      "updateTypes": ["patch"]
     }
   ]
 }
