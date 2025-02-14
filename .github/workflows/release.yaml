@@ -3,7 +3,7 @@ name: Publish Helm Charts
 on:
   release:
     types:
-      - published  # Runs when release-please publishes a GitHub release
+      - created
 
 jobs:
   release-helm:
