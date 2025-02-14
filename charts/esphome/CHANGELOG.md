@@ -5,6 +5,15 @@
 
 ### Miscellaneous
 
+* **ci:** trigger ci ([a0bf5e4](https://github.com/JeffResc/charts/commit/a0bf5e4f527464c794ce8167646411b19c302cd6))
+* **main:** release esphome 0.1.0 ([76f6307](https://github.com/JeffResc/charts/commit/76f6307b5f9cdbb62815bd8a9fe1800a1fdd8bb8))
+* release 0.1.0 ([22fbaa2](https://github.com/JeffResc/charts/commit/22fbaa2fd8b8770ca1a021f0f9f2c58e9d4bc012))
+
+## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.0) (2025-02-14)
+
+
+### Miscellaneous
+
 * release 0.1.0 ([22fbaa2](https://github.com/JeffResc/charts/commit/22fbaa2fd8b8770ca1a021f0f9f2c58e9d4bc012))
 
 ## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.0) (2025-02-14)
