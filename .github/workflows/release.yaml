@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0  # Required for proper versioning
 
       - name: Setup Helm
-        uses: azure/setup-helm@v3
+        uses: azure/setup-helm@v4
         with:
           version: v3.14.0
 
