@@ -14,14 +14,12 @@
     "charts/esphome": {
       "release-type": "helm",
       "path": "charts/esphome",
-      "component": "esphome",
-      "tag-separator": "-"
+      "component": "esphome"
     },
     "charts/it-tools": {
       "release-type": "helm",
       "path": "charts/it-tools",
       "component": "it-tools",
-      "tag-separator": "-"
     }
   },
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
