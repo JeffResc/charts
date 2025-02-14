@@ -3,6 +3,13 @@
 ## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.0) (2025-02-14)
 
 
+### Miscellaneous
+
+* release 0.1.0 ([22fbaa2](https://github.com/JeffResc/charts/commit/22fbaa2fd8b8770ca1a021f0f9f2c58e9d4bc012))
+
+## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.0) (2025-02-14)
+
+
 ### Bug Fixes
 
 * clear changelog ([a6067fe](https://github.com/JeffResc/charts/commit/a6067fec32e3b8caca4a80c5c8a0e180d26d4a8a))
