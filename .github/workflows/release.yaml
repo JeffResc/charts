@@ -19,58 +19,10 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
 
-      - name: Install Chart Releaser
-        run: |
-          curl -sSL https://github.com/helm/chart-releaser/releases/download/v1.7.0/chart-releaser_1.7.0_linux_amd64.tar.gz -o chart-releaser.tar.gz
-          tar -xzf chart-releaser.tar.gz
-          chmod +x cr
-          sudo mv cr /usr/local/bin/
-
-      - name: Create GitHub Pages Directory
-        run: mkdir -p .cr-release-packages
-
-      - name: Check for Version Changes & Release
+      - name: Run Chart Releaser
+        uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          for chart in charts/*; do
-            if [ -d "$chart" ]; then
-              CHART_NAME=$(basename "$chart")
-              VERSION=$(grep '^version:' "$chart/Chart.yaml" | awk '{print $2}')
-
-              echo "Checking if $CHART_NAME version $VERSION is already released..."
-
-              # Check if the release already exists
-              if gh release view "${CHART_NAME}-${VERSION}" --repo "${{ github.repository }}" > /dev/null 2>&1; then
-                echo "🚫 Release ${CHART_NAME}-${VERSION} already exists. Skipping..."
-                continue
-              fi
-
-              echo "✅ New version detected. Releasing $CHART_NAME $VERSION..."
-              helm package "$chart" --destination .cr-release-packages
-            fi
-          done
-
-          # If new packages exist, upload them
-          if ls .cr-release-packages/*.tgz 1> /dev/null 2>&1; then
-            cr upload --owner=${{ github.repository_owner }} --git-repo=${{ github.event.repository.name }} --token="${{ secrets.GITHUB_TOKEN }}" --package-path=".cr-release-packages"
-          else
-            echo "🚫 No new chart versions detected. Skipping upload."
-          fi
-
-      - name: Publish Updated Index to `gh-pages`
-        run: |
-          git fetch origin gh-pages || git checkout --orphan gh-pages
-          git checkout gh-pages
-
-          # Preserve previous releases in the Helm repo index
-          if [ -f index.yaml ]; then
-            cp index.yaml old-index.yaml
-          fi
-
-          # Regenerate the index and merge it with old versions
-          cr index --owner=${{ github.repository_owner }} --git-repo=${{ github.event.repository.name }} --token="${{ secrets.GITHUB_TOKEN }}" --charts-repo="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" --merge
-
-          git add index.yaml
-          git commit -m "Update Helm chart index [skip ci]" || echo "No changes to commit"
-          git push origin gh-pages || echo "No changes to push"
+        with:
+          charts_dir: charts/
+          skip_existing: true
