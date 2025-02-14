@@ -2,7 +2,6 @@
   "enabled": true,
   "forkProcessing": "enabled",
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [":semanticCommits", ":semanticCommitTypeAll(chore)"],
   "regexManagers": [
     {
       "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
