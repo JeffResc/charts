@@ -1,9 +1,10 @@
 name: Publish Helm Charts
 
 on:
-  release:
-    types:
-      - created
+  push:
+    tags:
+      - '*-v*'
+  workflow_dispatch:
 
 jobs:
   release-helm:
@@ -19,12 +20,12 @@ jobs:
       - name: Setup Helm
         uses: azure/setup-helm@v4
 
-      - name: Extract Chart Name and Version from Release Tag
+      - name: Extract Chart Name and Version from Tag
         id: parse_tag
         run: |
-          RELEASE_TAG="${{ github.event.release.tag_name }}"
-          CHART_NAME=$(echo "$RELEASE_TAG" | cut -d'-' -f1)
-          CHART_VERSION=$(echo "$RELEASE_TAG" | cut -d'v' -f2)
+          RELEASE_TAG="${{ github.ref_name }}"
+          CHART_NAME=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $1}')
+          CHART_VERSION=$(echo "$RELEASE_TAG" | awk -F'[-v]' '{print $NF}')
 
           echo "Chart Name: $CHART_NAME"
           echo "Chart Version: $CHART_VERSION"
