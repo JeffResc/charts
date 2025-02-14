@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   esphome:
   - apiVersion: v2
+    appVersion: 2024.12.4
+    created: "2025-02-14T15:44:25.04765103Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: bf369dd2f9a43dbb3ae46c1eaf51aafb97f4ef0913ed17d114677d6516075004
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.0/esphome-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
     appVersion: 2024.9.1
     created: "2024-09-28T21:49:54.388482265Z"
     description: ESPHome is a system to control your microcontrollers by simple yet
@@ -38,6 +56,22 @@ entries:
     - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
     version: 0.0.2
   it-tools:
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-02-14T15:44:25.163760905Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 4b6289bf968b705617ddc1b1b11bba003f6ede81ceda185bd63a0242bf027064
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
+    version: 0.1.0
   - apiVersion: v2
     appVersion: 2024.5.13-a0bc346
     created: "2024-09-28T21:49:54.549210598Z"
@@ -86,4 +120,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
     version: 0.0.1
-generated: "2025-02-14T02:32:10.32841048Z"
+generated: "2025-02-14T15:44:25.16378486Z"
