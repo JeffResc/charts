@@ -10,7 +10,7 @@
         "appVersion:\\s*\"?(?<currentValue>[^\"]+)\"?\\s*#\\s*renovate:\\s*image=(?<depName>[^\\s]+)"
       ],
       "depNameTemplate": "{{depName}}",
-      "datasourceTemplate": "{{datasource}}",
+      "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
     }
   ]
