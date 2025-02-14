@@ -11,21 +11,6 @@
       "depNameTemplate": "{{depName}}",
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
-    },
-    {
-      "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
-      "matchStrings": ["^version:\\s?(?<currentValue>.+)$"],
-      "depNameTemplate": "helm-chart",
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "semver"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchDepNames": ["helm-chart"],
-      "bumpVersion": "patch",
-      "recreateClosed": true,
-      "automerge": false
     }
   ]
 }
