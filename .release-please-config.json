@@ -10,7 +10,6 @@
   "draft": false,
   "versioning": "default",
   "bump-minor-pre-major": true,
-  "skip-github-release": true,
   "packages": {
     "charts/esphome": {
       "release-type": "helm",
