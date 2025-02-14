@@ -23,8 +23,7 @@
   "packageRules": [
     {
       "matchDepNames": ["helm-chart-version"],
-      "versioning": "semver",
-      "updateTypes": ["patch"]
+      "updateTypes": ["patch"],
     }
   ]
 }
