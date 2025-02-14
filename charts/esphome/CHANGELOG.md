@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/JeffResc/charts/compare/esphome-v0.1.0...esphome-v0.1.1) (2025-02-14)
+
+
+### Bug Fixes
+
+* structure ([03bd5d7](https://github.com/JeffResc/charts/commit/03bd5d7e2e3a3c2d6ff00fd538830a136cef88ce))
+
 ## [0.1.0](https://github.com/JeffResc/charts/compare/esphome-0.0.3...esphome-v0.1.0) (2025-02-14)
 
 
