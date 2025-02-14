@@ -13,7 +13,7 @@
       "versioningTemplate": "docker"
     },
     {
-      "fileMatch": ["charts/.*/Chart\\.yaml$"],
+      "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
       "matchStrings": ["^version:\\s?(?<currentValue>.+)$"],
       "depNameTemplate": "helm-chart",
       "datasourceTemplate": "generic",
