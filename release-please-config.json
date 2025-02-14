@@ -1,0 +1,14 @@
+{
+    "packages": {
+      "esphome": {
+        "path": "charts/esphome",
+        "release-type": "helm"
+      },
+      "it-tools": {
+        "path": "charts/it-tools",
+        "release-type": "helm"
+      }
+    },
+    "monorepo-tags": true
+  }
+  

@@ -18,11 +18,9 @@ jobs:
           fetch-depth: 0
 
       - name: Run Release Please
-        uses: googleapis/release-please-action@v3
+        uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: helm
           monorepo-tags: true
-          packages: |
-            charts/esphome/Chart.yaml
-            charts/it-tools/Chart.yaml
+          manifest-file: release-please-config.json
