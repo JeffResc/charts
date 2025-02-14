@@ -54,9 +54,11 @@ jobs:
         run: |
           for chart in $(echo "$changed" | tr ',' ' '); do
             CHART_NAME=$(basename "$chart")
-            RELEASE_VERSION=$(jq -r ".\"charts/$CHART_NAME\".version" < .release-please-manifest.json)
-            gh release upload "v$RELEASE_VERSION" helm-charts/*
+            RELEASE_VERSION=$(jq -r ".\"charts/$CHART_NAME\"" < .release-please-manifest.json)
+            echo "Uploading $CHART_NAME version $RELEASE_VERSION..."
+            gh release upload "v$RELEASE_VERSION" helm-charts/"$CHART_NAME-$RELEASE_VERSION.tgz"
           done
+
 
       - name: Publish Helm Charts to `gh-pages`
         if: env.changed != ''
