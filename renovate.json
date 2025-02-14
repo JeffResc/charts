@@ -15,17 +15,17 @@
     {
       "fileMatch": ["^charts\\/.*\\/Chart\\.yaml$"],
       "matchStrings": ["^version:\\s?(?<currentValue>.+)$"],
-      "depNameTemplate": "helm-chart",
-      "datasourceTemplate": "generic",
-      "versioningTemplate": "semver"
+      "depNameTemplate": "helm-chart-version",
+      "versioning": "semver",
+      "automerge": false,
+      "datasourceTemplate": "staticVersions"
     }
   ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["helm-chart"],
-      "matchDepTypes": ["version"],
-      "semanticCommitType": "fix",
-      "updateTypes": ["patch"]
+  "staticVersions": {
+    "helm-chart-version": {
+      "currentVersion": "0.1.0",
+      "versioning": "semver",
+      "updateType": "patch"
     }
-  ]
+  }
 }
