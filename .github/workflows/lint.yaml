@@ -1,0 +1,32 @@
+name: Lint and Validate Helm Charts
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Lint Helm Charts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Lint Helm charts
+        uses: stefanprodan/helm-lint-action@v1
+        with:
+          charts_dir: charts/
+
+  k8s-schema-check:
+    name: Validate Helm Manifests Against Kubernetes API
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate Helm templates against Kubernetes API
+        uses: instrumenta/kubeval-action@master
+        with:
+          files: charts/*/templates/*.yaml
+          strict: true
