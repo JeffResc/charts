@@ -6,11 +6,13 @@
       "packages": {
         "esphome": {
           "path": "charts/esphome",
+          "component": "esphome",
           "bump-minor-pre-major": true,
           "tag-separator": "-"
         },
         "it-tools": {
           "path": "charts/it-tools",
+          "component": "it-tools",
           "bump-minor-pre-major": true,
           "tag-separator": "-"
         }
