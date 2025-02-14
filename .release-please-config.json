@@ -8,6 +8,14 @@
   "packages": {
     "charts/esphome": {
       "release-type": "helm",
+      "draft": false,
+      "changelog-path": "charts/esphome/CHANGELOG.md",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features", "hidden": false },
+        { "type": "fix", "section": "Bug Fixes", "hidden": false },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false }
+      ],
+      "versioning": "default",
       "path": "charts/esphome",
       "component": "esphome",
       "tag-separator": "-",
@@ -15,10 +23,19 @@
     },
     "charts/it-tools": {
       "release-type": "helm",
+      "draft": false,
+      "changelog-path": "charts/it-tools/CHANGELOG.md",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features", "hidden": false },
+        { "type": "fix", "section": "Bug Fixes", "hidden": false },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false }
+      ],
+      "versioning": "default",
       "path": "charts/it-tools",
       "component": "it-tools",
       "tag-separator": "-",
       "bump-minor-pre-major": true
     }
-  }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
