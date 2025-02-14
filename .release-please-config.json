@@ -1,0 +1,19 @@
+{
+    "branches": [
+      {
+        "branch": "main",
+        "release-type": "helm",
+        "packages": {
+          "esphome": {
+            "path": "charts/esphome",
+            "bump-minor-pre-major": true
+          },
+          "it-tools": {
+            "path": "charts/it-tools",
+            "bump-minor-pre-major": true
+          }
+        }
+      }
+    ]
+  }
+  
