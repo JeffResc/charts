@@ -167,9 +167,11 @@ autoscaling:
 ## @section Nginx configuration parameters
 ## Nginx configuration parameters
 ## @param nginxConf.existingConfigmap Provide an existing ConfigMap for the Nginx configuration 
+## @param nginxConf.cachePath Provide a cache path override (useful for other it-tools images such as Chainguard) 
 ##
 nginxConf:
   existingConfigmap: ""
+  cachePath: "/var/cache/nginx"
 
 ## @section Extra volumes parameter
 ## Extra volumes parameter

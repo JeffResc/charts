@@ -56,7 +56,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: cache
-              mountPath: "/var/cache/nginx"
+              mountPath: "{{ .Values.nginxConf.cachePath }}"
             - name: tmp
               mountPath: "/tmp/nginx"
             - name: conf 
