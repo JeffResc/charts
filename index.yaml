@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   esphome:
   - apiVersion: v2
+    appVersion: 2025.4.1
+    created: "2025-05-10T03:05:20.053447632Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 313b1e4493fd3326c81960678aca5cab17c65e66431a23a28270d9b3519f435d
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.4/esphome-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 2025.4.0
     created: "2025-04-28T22:32:41.493141398Z"
     description: ESPHome is a system to control your microcontrollers by simple yet
@@ -206,4 +225,22 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
     version: 0.0.1
-generated: "2025-04-28T22:33:02.751000784Z"
+  traccar:
+  - apiVersion: v2
+    appVersion: 6.6-alpine
+    created: "2025-05-10T03:05:20.270753925Z"
+    description: Modern GPS Tracking Platform
+    digest: 90c874b01f73e5a59d1d470e16639406978146aac5426e9590b9f06a3ceee482
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-10T03:05:20.270792086Z"
