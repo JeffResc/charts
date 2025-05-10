@@ -1,0 +1,27 @@
+{{- if .Values.loadbalancer.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "traccar.fullname" . }}-lb
+  labels:
+    {{- include "traccar.labels" . | nindent 4 }}
+spec:
+  type: LoadBalancer
+  selector:
+    {{- include "traccar.selectorLabels" . | nindent 4 }}
+  ports:
+    {{- $start := int .Values.loadbalancer.portRange.start }}
+    {{- $end := int .Values.loadbalancer.portRange.end }}
+    {{- $count := int (add (sub $end $start) 1) }}
+    {{- range $i := until $count }}
+    {{- $port := add $start $i }}
+    - name: tcp-{{ $port }}
+      protocol: TCP
+      port: {{ $port }}
+      targetPort: {{ $port }}
+    - name: udp-{{ $port }}
+      protocol: UDP
+      port: {{ $port }}
+      targetPort: {{ $port }}
+    {{- end }}
+{{- end }}
