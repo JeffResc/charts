@@ -102,10 +102,14 @@ helm uninstall traccar
 
 ### Probes
 
-| Name             | Description              | Value                      |
-|------------------|--------------------------|----------------------------|
-| `livenessProbe`  | Liveness HTTP probe      | `GET / on port http`       |
-| `readinessProbe` | Readiness HTTP probe     | `GET / on port http`       |
+| Name                                | Description                              | Value           |
+|-------------------------------------|------------------------------------------|-----------------|
+| `livenessProbe.httpGet.path`        | HTTP path for the liveness probe         | `/`             |
+| `livenessProbe.httpGet.port`        | Port name or number for the liveness probe | `http`         |
+| `livenessProbe.initialDelaySeconds` | Initial delay before the liveness probe starts | `30`       |
+| `readinessProbe.httpGet.path`       | HTTP path for the readiness probe        | `/`             |
+| `readinessProbe.httpGet.port`       | Port name or number for the readiness probe | `http`        |
+| `readinessProbe.initialDelaySeconds`| Initial delay before the readiness probe starts | `30`       |
 
 ### Extra volumes parameter
 
@@ -121,15 +125,27 @@ helm uninstall traccar
 
 ### Traccar Configuration Parameters
 
-| Name                    | Description                               | Value                            |
-|-------------------------|-------------------------------------------|----------------------------------|
-| `config.enabled`        | Enable Traccar configuration              | `true`                           |
-| `config.database.driver`| JDBC driver for the database              | `org.h2.Driver`                  |
-| `config.database.url`   | JDBC connection URL                       | `jdbc:h2:./data/database`        |
-| `config.database.user`  | Database username                         | `sa`                             |
-| `config.database.password` | Database password                      | `changeme`                       |
+| Name                                 | Description                                                                 | Value                                |
+|--------------------------------------|-----------------------------------------------------------------------------|--------------------------------------|
+| `config.enabled`                     | Enable Traccar custom configuration block                                   | `true`                               |
+| `config.generate`                    | Indicates whether to auto-generate a configuration file                     | `true`                               |
+| `config.mysql.passwordSecretRef`     | Name of the Kubernetes Secret containing the MySQL password                 | `traccar-mysql`                      |
+| `config.mysql.passwordSecretKey`     | Key in the Secret where the MySQL password is stored                        | `mysql-password`                     |
+| `config.values.database.driver`      | JDBC driver class name for the database                                     | `com.mysql.cj.jdbc.Driver`           |
+| `config.values.database.user`        | Username used to connect to the database                                    | `traccar`                            |
+| `config.values.database.url`         | JDBC connection URL for the MySQL database                                  | `"jdbc:mysql://traccar-mysql/traccar"` |
 
-### Load balancer
+### Init Container Parameters
+
+| Name                              | Description                                                  | Value         |
+|-----------------------------------|--------------------------------------------------------------|---------------|
+| `initContainer.enabled`           | Enable init container                                        | `true`        |
+| `initContainer.image.repository`  | Init container image repository                              | `busybox`     |
+| `initContainer.image.pullPolicy`  | Init container image pull policy                             | `IfNotPresent`|
+| `initContainer.image.tag`         | Tag of the init container image                              | `"1.37"`      |
+| `initContainer.image.securityContext` | Security context for the init container image             | `{}`          |
+
+### Load Balancer Parameters
 
 | Name                         | Description                          | Value     |
 |------------------------------|--------------------------------------|-----------|
@@ -137,7 +153,18 @@ helm uninstall traccar
 | `loadbalancer.portRange.start` | Starting port for load balancer    | `5000`    |
 | `loadbalancer.portRange.end`   | Ending port for load balancer      | `5150`    |
 
+### MySQL Configuration Parameters
+
+| Name                      | Description                                   | Value     |
+|---------------------------|-----------------------------------------------|-----------|
+| `mysql.enabled`           | Enable bundled MySQL deployment               | `true `   |
+| `mysql.auth.database`     | Name of the MySQL database to create/use      | `traccar` |
+| `mysql.auth.username`     | Username for the MySQL database               | `traccar` |
+
 ## Changelog
+
+### 0.1.1
+- MySQL database integration
 
 ### 0.1.0
 - Initial release

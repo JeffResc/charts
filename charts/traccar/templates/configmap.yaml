@@ -1,4 +1,4 @@
-{{- if .Values.config.enabled }}
+{{- if .Values.config.generate }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -9,8 +9,9 @@ data:
     <!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
     <properties>
       <!-- Documentation: https://www.traccar.org/configuration-file/ -->
-      {{- range $key, $value := .Values.config }}
+      {{- range $key, $value := .Values.config.values }}
       <entry key="{{ $key }}">{{ $value }}</entry>
       {{- end }}
+      <entry key='database.password'>${DATABASE_PASSWORD}</entry>
     </properties>
 {{- end }}

@@ -1,4 +1,4 @@
-{{- if .Values.loadbalancer.enabled }}
+{{- if .Values.loadBalancer.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,8 +10,8 @@ spec:
   selector:
     {{- include "traccar.selectorLabels" . | nindent 4 }}
   ports:
-    {{- $start := int .Values.loadbalancer.portRange.start }}
-    {{- $end := int .Values.loadbalancer.portRange.end }}
+    {{- $start := int .Values.loadBalancer.portRange.start }}
+    {{- $end := int .Values.loadBalancer.portRange.end }}
     {{- $count := int (add (sub $end $start) 1) }}
     {{- range $i := until $count }}
     {{- $port := add $start $i }}

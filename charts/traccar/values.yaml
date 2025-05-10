@@ -4,11 +4,24 @@
 
 # Traccar config
 config:
+  generate: true
+  mysql:
+    passwordSecretRef: traccar-mysql
+    passwordSecretKey: mysql-password
+  values:
+    database.driver: com.mysql.cj.jdbc.Driver
+    database.user: traccar
+    database.url: "jdbc:mysql://traccar-mysql/traccar"
+
+initContainer:
   enabled: true
-  database.driver: org.h2.Driver
-  database.url: jdbc:h2:./data/database
-  database.user: sa
-  database.password: changeme
+  image:
+    repository: busybox
+    # This sets the pull policy for images.
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "1.37"
+    securityContext: {}
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1
@@ -98,10 +111,12 @@ livenessProbe:
   httpGet:
     path: /
     port: http
+  initialDelaySeconds: 30
 readinessProbe:
   httpGet:
     path: /
     port: http
+  initialDelaySeconds: 30
 
 # This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
 autoscaling:
@@ -130,8 +145,14 @@ tolerations: []
 
 affinity: {}
 
-loadbalancer:
+loadBalancer:
   enabled: false
   portRange:
     start: 5000
     end: 5150
+
+mysql:
+  enabled: true
+  auth:
+    database: traccar
+    username: traccar
