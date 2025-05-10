@@ -1,0 +1,16 @@
+{{- if .Values.config.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: traccar-config
+data:
+  traccar.xml: |-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+    <properties>
+      <!-- Documentation: https://www.traccar.org/configuration-file/ -->
+      {{- range $key, $value := .Values.config }}
+      <entry key="{{ $key }}">{{ $value }}</entry>
+      {{- end }}
+    </properties>
+{{- end }}
