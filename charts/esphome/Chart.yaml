@@ -5,6 +5,7 @@ description: ESPHome is a system to control your microcontrollers by simple yet
   systems.
 icon: https://avatars.githubusercontent.com/u/45919759
 sources:
+  - https://github.com/jeffresc/charts
   - https://github.com/esphome/esphome
 maintainers:
   - name: Jeff Rescignano

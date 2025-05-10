@@ -1,6 +1,13 @@
 apiVersion: v2
 name: traccar
-description: A Helm chart for Kubernetes
+description: Modern GPS Tracking Platform
+icon: https://avatars.githubusercontent.com/u/37892282
+sources:
+  - https://github.com/jeffresc/charts
+  - https://github.com/traccar/traccar
+maintainers:
+  - name: Jeff Rescignano
+    email: jeff@jeffresc.dev
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -3,6 +3,7 @@ name: it-tools
 description: Collection of handy online tools for developers, with great UX
 icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
 sources:
+  - https://github.com/jeffresc/charts
   - https://github.com/CorentinTh/it-tools
 maintainers:
   - name: Jeff Rescignano
