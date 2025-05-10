@@ -5,9 +5,11 @@
 # Traccar config
 config:
   generate: true
-  mysql:
-    passwordSecretRef: traccar-mysql
-    passwordSecretKey: mysql-password
+  secrets: {}
+    # - key: database.password
+    #   env: DATABASE_PASSWORD
+    #   secretRef: traccar-mysql
+    #   secretKey: mysql-password
   values:
     database.driver: com.mysql.cj.jdbc.Driver
     database.user: traccar
@@ -152,7 +154,7 @@ loadBalancer:
     end: 5150
 
 mysql:
-  enabled: true
+  enabled: false
   auth:
     database: traccar
     username: traccar

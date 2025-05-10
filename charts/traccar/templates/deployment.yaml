@@ -45,16 +45,21 @@ spec:
             - sh
             - -c
             - |
-              PASS=$(cat /secrets/password/{{ .Values.config.mysql.passwordSecretKey }})
-              sed "s|\${DATABASE_PASSWORD}|$PASS|g" /config-template/traccar.xml > /config-final/traccar.xml
+              cp /config-template/traccar.xml /config-final/traccar.xml
+              {{- range .Values.config.secrets }}
+              val=$(cat /secrets/{{ .env }}/{{ .secretKey }})
+              sed -i "s|<entry key='{{ .key }}'></entry>|<entry key='{{ .key }}'>$val</entry>|" /config-final/traccar.xml
+              {{- end }}
           volumeMounts:
             - name: traccar-config
               mountPath: /config-template
-            - name: db-password
-              mountPath: /secrets/password
-              readOnly: true
             - name: config-volume
               mountPath: /config-final
+            {{- range .Values.config.secrets }}
+            - name: secret-{{ .env | lower }}
+              mountPath: /secrets/{{ .env }}
+              readOnly: true
+            {{- end }}
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -93,9 +98,11 @@ spec:
         - name: traccar-config
           configMap:
             name: traccar-config
-        - name: db-password
+        {{- range .Values.config.secrets }}
+        - name: secret-{{ .env | lower }}
           secret:
-            secretName: {{ .Values.config.mysql.passwordSecretRef }}
+            secretName: {{ .secretRef }}
+        {{- end }}
         {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
         {{- end }}

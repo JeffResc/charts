@@ -125,15 +125,14 @@ helm uninstall traccar
 
 ### Traccar Configuration Parameters
 
-| Name                                 | Description                                                                 | Value                                |
-|--------------------------------------|-----------------------------------------------------------------------------|--------------------------------------|
-| `config.enabled`                     | Enable Traccar custom configuration block                                   | `true`                               |
-| `config.generate`                    | Indicates whether to auto-generate a configuration file                     | `true`                               |
-| `config.mysql.passwordSecretRef`     | Name of the Kubernetes Secret containing the MySQL password                 | `traccar-mysql`                      |
-| `config.mysql.passwordSecretKey`     | Key in the Secret where the MySQL password is stored                        | `mysql-password`                     |
-| `config.values.database.driver`      | JDBC driver class name for the database                                     | `com.mysql.cj.jdbc.Driver`           |
-| `config.values.database.user`        | Username used to connect to the database                                    | `traccar`                            |
-| `config.values.database.url`         | JDBC connection URL for the MySQL database                                  | `"jdbc:mysql://traccar-mysql/traccar"` |
+| Name                                | Description                                                              | Value                                 |
+|-------------------------------------|--------------------------------------------------------------------------|---------------------------------------|
+| `config.generate`                   | Indicates whether to auto-generate a configuration file                  | `true`                                |
+| `config.secrets`                    | List of secrets to inject as environment variables                       | `[{ key: database.password, env: DATABASE_PASSWORD, secretRef: traccar-mysql, secretKey: mysql-password }]` |
+| `config.secrets`                    | Configuration secrets                                                    | `{}}`                   |
+| `config.values.database.driver`     | JDBC driver class name for the database                                  | `com.mysql.cj.jdbc.Driver`            |
+| `config.values.database.user`       | Username used to connect to the database                                 | `traccar`                             |
+| `config.values.database.url`        | JDBC connection URL for the MySQL database 
 
 ### Init Container Parameters
 
@@ -157,11 +156,14 @@ helm uninstall traccar
 
 | Name                      | Description                                   | Value     |
 |---------------------------|-----------------------------------------------|-----------|
-| `mysql.enabled`           | Enable bundled MySQL deployment               | `true `   |
+| `mysql.enabled`           | Enable bundled MySQL deployment               | `false`   |
 | `mysql.auth.database`     | Name of the MySQL database to create/use      | `traccar` |
 | `mysql.auth.username`     | Username for the MySQL database               | `traccar` |
 
 ## Changelog
+
+### 0.1.2
+- Add support for configuration secrets
 
 ### 0.1.1
 - MySQL database integration
