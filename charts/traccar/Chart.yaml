@@ -29,9 +29,3 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "6.6-alpine" # renovate: image=traccar/traccar
-
-dependencies:
-  - name: mysql
-    version: 12.3.5
-    repository: https://charts.bitnami.com/bitnami
-    condition: mysql.enabled

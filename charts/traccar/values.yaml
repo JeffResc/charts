@@ -130,9 +130,6 @@ tolerations: []
 
 affinity: {}
 
-mysql:
-  enabled: false
-
 loadbalancer:
   enabled: false
   portRange:

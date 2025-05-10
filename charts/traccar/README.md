@@ -129,13 +129,13 @@ helm uninstall traccar
 | `config.database.user`  | Database username                         | `sa`                             |
 | `config.database.password` | Database password                      | `changeme`                       |
 
-### Feature Toggles
+### Load balancer
 
-| Name                    | Description                      | Value  |
-|-------------------------|----------------------------------|--------|
-| `mysql.enabled`         | Enable MySQL integration         | `false`|
-| `loadbalancer.enabled`  | Enable load balancer feature     | `false`|
-
+| Name                         | Description                          | Value     |
+|------------------------------|--------------------------------------|-----------|
+| `loadbalancer.enabled`       | Enable load balancer feature         | `false`   |
+| `loadbalancer.portRange.start` | Starting port for load balancer    | `5000`    |
+| `loadbalancer.portRange.end`   | Ending port for load balancer      | `5150`    |
 
 ## Changelog
 
