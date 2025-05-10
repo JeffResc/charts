@@ -12,6 +12,5 @@ data:
       {{- range $key, $value := .Values.config.values }}
       <entry key="{{ $key }}">{{ $value }}</entry>
       {{- end }}
-      <entry key='database.password'>${DATABASE_PASSWORD}</entry>
     </properties>
 {{- end }}

@@ -106,10 +106,8 @@ helm uninstall traccar
 |-------------------------------------|------------------------------------------|-----------------|
 | `livenessProbe.httpGet.path`        | HTTP path for the liveness probe         | `/`             |
 | `livenessProbe.httpGet.port`        | Port name or number for the liveness probe | `http`         |
-| `livenessProbe.initialDelaySeconds` | Initial delay before the liveness probe starts | `30`       |
 | `readinessProbe.httpGet.path`       | HTTP path for the readiness probe        | `/`             |
 | `readinessProbe.httpGet.port`       | Port name or number for the readiness probe | `http`        |
-| `readinessProbe.initialDelaySeconds`| Initial delay before the readiness probe starts | `30`       |
 
 ### Extra volumes parameter
 
@@ -161,6 +159,9 @@ helm uninstall traccar
 | `mysql.auth.username`     | Username for the MySQL database               | `traccar` |
 
 ## Changelog
+
+### 0.1.3
+- Configuration secret hotfix
 
 ### 0.1.2
 - Add support for configuration secrets

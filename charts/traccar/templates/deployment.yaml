@@ -48,7 +48,7 @@ spec:
               cp /config-template/traccar.xml /config-final/traccar.xml
               {{- range .Values.config.secrets }}
               val=$(cat /secrets/{{ .env }}/{{ .secretKey }})
-              sed -i "s|<entry key='{{ .key }}'></entry>|<entry key='{{ .key }}'>$val</entry>|" /config-final/traccar.xml
+              sed -i "s|</properties>|  <entry key='{{ .key }}'>$val</entry>\n</properties>|" /config-final/traccar.xml
               {{- end }}
           volumeMounts:
             - name: traccar-config

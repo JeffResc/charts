@@ -5,11 +5,11 @@
 # Traccar config
 config:
   generate: true
-  secrets: {}
-    # - key: database.password
-    #   env: DATABASE_PASSWORD
-    #   secretRef: traccar-mysql
-    #   secretKey: mysql-password
+  secrets:
+    - key: database.password
+      env: DATABASE-PASSWORD
+      secretRef: traccar-mysql
+      secretKey: mysql-password
   values:
     database.driver: com.mysql.cj.jdbc.Driver
     database.user: traccar
@@ -113,12 +113,10 @@ livenessProbe:
   httpGet:
     path: /
     port: http
-  initialDelaySeconds: 30
 readinessProbe:
   httpGet:
     path: /
     port: http
-  initialDelaySeconds: 30
 
 # This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
 autoscaling:
