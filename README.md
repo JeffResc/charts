@@ -32,8 +32,8 @@ helm repo update
 <tbody>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
-<td markdown="span">0.1.3</td>
-<td markdown="span">2025.4.0</td>
+<td markdown="span">0.1.4</td>
+<td markdown="span">2025.4.1</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
 </tr>
 <tr>
