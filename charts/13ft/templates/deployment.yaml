@@ -8,7 +8,6 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
-  serviceName: svc-{{ include "13ft.fullname" . }}
   selector:
     matchLabels:
       {{- include "13ft.selectorLabels" . | nindent 6 }}
