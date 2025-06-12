@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   esphome:
   - apiVersion: v2
+    appVersion: 2025.5.2
+    created: "2025-06-12T01:50:18.353032727Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: dadbc48abe93368659a66c1cfb73bc0d09686f01da4c30107e4431247bcf76d6
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.6/esphome-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     appVersion: 2025.5.0
     created: "2025-05-21T18:11:47.051090166Z"
     description: ESPHome is a system to control your microcontrollers by simple yet
@@ -328,4 +347,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-21T18:11:47.051146903Z"
+generated: "2025-06-12T01:50:18.353093131Z"
