@@ -31,6 +31,12 @@ helm repo update
 </thead>
 <tbody>
 <tr>
+<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/13ft">13ft</a></td>
+<td markdown="span">0.1.0</td>
+<td markdown="span">0.3.4</td>
+<td markdown="span">Custom 12ft.io replacement</td>
+</tr>
+<tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
 <td markdown="span">0.1.6</td>
 <td markdown="span">2025.5.2</td>
