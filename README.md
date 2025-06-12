@@ -44,8 +44,8 @@ helm repo update
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/traccar">traccar</a></td>
-<td markdown="span">0.1.3</td>
-<td markdown="span">6.6-alpine</td>
+<td markdown="span">0.1.4</td>
+<td markdown="span">6.7-alpine</td>
 <td markdown="span">Modern GPS Tracking Platform</td>
 </tr>
 </tbody>
