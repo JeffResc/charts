@@ -33,5 +33,5 @@ appVersion: "6.7-alpine" # renovate: image=traccar/traccar
 dependencies:
 - name: mysql
   condition: mysql.enabled
-  version: "12.3.5"
+  version: "13.0.2"
   repository: "https://charts.bitnami.com/bitnami"
