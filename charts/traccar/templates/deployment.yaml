@@ -43,18 +43,15 @@ spec:
           {{- end }}
           command:
             - sh
-            - -c
-            - |
-              cp /config-template/traccar.xml /config-final/traccar.xml
-              {{- range .Values.config.secrets }}
-              val=$(cat /secrets/{{ .env }}/{{ .secretKey }})
-              sed -i "s|</properties>|  <entry key='{{ .key }}'>$val</entry>\n</properties>|" /config-final/traccar.xml
-              {{- end }}
+            - /scripts/generate-traccar-config.sh
           volumeMounts:
             - name: traccar-config
               mountPath: /config-template
             - name: config-volume
               mountPath: /config-final
+            - name: init-script
+              mountPath: /scripts/generate-traccar-config.sh
+              subPath: generate-traccar-config.sh
             {{- range .Values.config.secrets }}
             - name: secret-{{ .env | lower }}
               mountPath: /secrets/{{ .env }}
@@ -98,6 +95,10 @@ spec:
         - name: traccar-config
           configMap:
             name: traccar-config
+        - name: init-script
+          configMap:
+            name: traccar-init-script
+            defaultMode: 0755
         {{- range .Values.config.secrets }}
         - name: secret-{{ .env | lower }}
           secret:

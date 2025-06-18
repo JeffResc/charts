@@ -1,0 +1,16 @@
+{{- if .Values.initContainer.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: traccar-init-script
+  labels:
+    {{- include "traccar.labels" . | nindent 4 }}
+data:
+  generate-traccar-config.sh: |-
+    #!/bin/sh
+    cp /config-template/traccar.xml /config-final/traccar.xml
+    {{- range .Values.config.secrets }}
+    val=$(cat /secrets/{{ .env }}/{{ .secretKey }})
+    sed -i "s|</properties>|  <entry key='{{ .key }}'>$val</entry>\\n</properties>|" /config-final/traccar.xml
+    {{- end }}
+{{- end }}
