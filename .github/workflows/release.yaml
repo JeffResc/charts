@@ -29,22 +29,22 @@ jobs:
         run: |
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
-        - name: Run chart-releaser
-          uses: helm/chart-releaser-action@v1.7.0
-          env:
-            CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          with:
-            charts_dir: charts/
-            skip_existing: true
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.7.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: charts/
+          skip_existing: true
 
-        - name: Copy README to gh-pages
-          run: |
-            git fetch origin gh-pages
-            git switch gh-pages
-            git checkout main -- README.md
-            if ! git diff --quiet README.md; then
-              git add README.md
-              git commit -m "Update README on gh-pages"
-              git push origin gh-pages
-            fi
-            git switch -
+      - name: Copy README to gh-pages
+        run: |
+          git fetch origin gh-pages
+          git switch gh-pages
+          git checkout main -- README.md
+          if ! git diff --quiet README.md; then
+            git add README.md
+            git commit -m "Update README on gh-pages"
+            git push origin gh-pages
+          fi
+          git switch -
