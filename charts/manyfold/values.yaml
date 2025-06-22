@@ -168,3 +168,5 @@ persistence:
   mountPath: "/manyfold-library"
   storageClass: ""
   size: "10Gi"
+
+initContainers: []
