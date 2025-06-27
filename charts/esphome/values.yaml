@@ -139,3 +139,16 @@ persistence:
   storageClass: "my-storageclass"
   size: "5Gi"
 
+# Additional volume mounts for the StatefulSet
+volumeMounts: []
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+# Additional volumes for the StatefulSet
+volumes: []
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+

@@ -124,6 +124,18 @@ helm uninstall esphome
 | `persistence.storageClass` | Persistent storage PVC storage class | `my-storageclass` |
 | `persistence.size`         | Persistent storage PVC size          | `5Gi`             |
 
+### Extra volume mounts parameter
+
+| Name           | Description                                   | Value |
+| -------------- | --------------------------------------------- | ----- |
+| `volumeMounts` | Additional volume mounts for the main pod     | `[]`  |
+
+### Extra volumes parameter
+
+| Name    | Description                            | Value |
+| ------- | -------------------------------------- | ----- |
+| `volumes` | Provide extra volumes for the main pod | `[]`  |
+
 ## Changelog
 
 ### 0.1.4

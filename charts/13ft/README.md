@@ -84,7 +84,7 @@ helm uninstall 13ft
 | Name           | Description            | Value       |
 | -------------- | ---------------------- | ----------- |
 | `service.type` | Service type to create | `ClusterIP` |
-| `service.port` | Service port to use    | `6052`      |
+| `service.port` | Service port to use    | `5000`      |
 
 ### Ingress parameters
 
@@ -115,23 +115,8 @@ helm uninstall 13ft
 | `autoscaling.targetCPUUtilizationPercentage`    | Target CPU utilization percentage    | `80`    |
 | `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utilization percentage | `80`    |
 
-### Persistence parameters
-
-| Name                       | Description                          | Value             |
-| -------------------------- | ------------------------------------ | ----------------- |
-| `persistence.enabled`      | If persistence is enabled            | `false`           |
-| `persistence.name`         | Persistent storage PVC name          | `esphome-config`  |
-| `persistence.storageClass` | Persistent storage PVC storage class | `my-storageclass` |
-| `persistence.size`         | Persistent storage PVC size          | `5Gi`             |
-
 ## Changelog
 
-### 0.1.4
-- updated default esphome container image to 2025.4.1
-
-### 0.0.2
-- Provided updated documentation
-
-### 0.0.1
+### 0.1.0
 - Initial release
 
