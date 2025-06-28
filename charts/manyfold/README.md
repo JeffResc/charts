@@ -177,6 +177,9 @@ helm uninstall manyfold
 
 ## Changelog
 
+### 0.1.4
+- Added Helm values schema for validation
+
 ### 0.1.1
 - Initial release
 

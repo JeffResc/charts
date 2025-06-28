@@ -117,6 +117,9 @@ helm uninstall 13ft
 
 ## Changelog
 
+### 0.1.1
+- Added Helm values schema for validation
+
 ### 0.1.0
 - Initial release
 
