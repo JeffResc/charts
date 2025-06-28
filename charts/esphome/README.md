@@ -138,6 +138,9 @@ helm uninstall esphome
 
 ## Changelog
 
+### 0.1.8
+- Added Helm values schema for validation
+
 ### 0.1.4
 - updated default esphome container image to 2025.4.1
 

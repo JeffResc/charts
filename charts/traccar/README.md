@@ -160,6 +160,9 @@ helm uninstall traccar
 
 ## Changelog
 
+### 0.1.6
+- Added Helm values schema for validation
+
 ### 0.1.3
 - Configuration secret hotfix
 

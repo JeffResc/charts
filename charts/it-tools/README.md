@@ -148,6 +148,9 @@ helm uninstall it-tools
 
 ## Changelog
 
+### 0.1.3
+- Added Helm values schema for validation
+
 ### 0.0.3
 - Add metrics support
 - Remove default resources
