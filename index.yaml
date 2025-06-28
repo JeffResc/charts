@@ -301,6 +301,31 @@ entries:
     version: 0.0.1
   manyfold:
   - apiVersion: v2
+    appVersion: 0.116.1
+    created: "2025-06-28T07:53:46.771355443Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.13
+    description: Organize and share your 3d print files
+    digest: de3556c73bcf508824d1a78a2d4bead97af82df1e5d763b7ebdd98d92fba096d
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.2/manyfold-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.114.1
     created: "2025-06-22T22:37:27.76021247Z"
     dependencies:
@@ -456,4 +481,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-28T07:52:51.006305677Z"
+generated: "2025-06-28T07:53:46.771409425Z"
