@@ -10,6 +10,7 @@ jobs:
   release-charts:
     permissions:
       contents: write
+      pages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
