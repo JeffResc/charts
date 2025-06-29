@@ -43,7 +43,7 @@ jobs:
           git fetch origin gh-pages
           git switch gh-pages
           git checkout main -- README.md
-          if ! git diff --quiet README.md; then
+          if ! git diff --quiet HEAD README.md; then
             git add README.md
             git commit -m "Update README on gh-pages"
             git push origin gh-pages
