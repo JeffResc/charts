@@ -1,0 +1,26 @@
+# Default values for newt.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+## @section Pangolin parameters
+## @param pangolin.endpoint Pangolin server endpoint URL
+pangolin:
+  endpoint: "https://pangolin.example.com"
+
+## @section Secret parameters
+## @param secret.name Name of the secret containing Newt credentials
+## @param secret.id.key Key in the secret for Newt ID
+## @param secret.secret.key Key in the secret for Newt secret
+secret:
+  name: newt-secrets
+  id:
+    key: newt_id
+  secret:
+    key: newt_secret
+
+## @section Image parameters
+## @param image.repository Docker image repository
+## @param image.tag Overrides the image tag whose default is the chart appVersion
+image:
+  repository: fosrl/newt
+  tag: ""
