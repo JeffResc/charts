@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "pangolin": {
+      "type": "object",
+      "properties": {
+        "endpoint": {
+          "type": "string",
+          "format": "uri",
+          "description": "Pangolin server endpoint URL"
+        }
+      },
+      "required": ["endpoint"],
+      "additionalProperties": false
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the secret containing Newt credentials"
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Key in the secret for Newt ID"
+            }
+          },
+          "required": ["key"],
+          "additionalProperties": false
+        },
+        "secret": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Key in the secret for Newt secret"
+            }
+          },
+          "required": ["key"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["name", "id", "secret"],
+      "additionalProperties": false
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "description": "Docker image repository"
+        },
+        "tag": {
+          "type": "string",
+          "description": "Docker image tag"
+        }
+      },
+      "required": ["repository", "tag"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["pangolin", "secret", "image"],
+  "additionalProperties": false
+}

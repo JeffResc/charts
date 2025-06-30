@@ -55,6 +55,12 @@ helm repo update
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
+<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/newt">newt</a></td>
+<td markdown="span">0.1.0</td>
+<td markdown="span">1.2.1</td>
+<td markdown="span">Tunneling client for Pangolin - secure WireGuard proxy</td>
+</tr>
+<tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/traccar">traccar</a></td>
 <td markdown="span">0.1.6</td>
 <td markdown="span">6.7-alpine</td>
