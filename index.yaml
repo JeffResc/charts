@@ -353,6 +353,31 @@ entries:
     version: 0.0.1
   manyfold:
   - apiVersion: v2
+    appVersion: 0.116.2
+    created: "2025-06-30T03:16:07.762832828Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 98acf9e778abcc0f5dbb2b7d626c33ef3da05e394a6e8f04fd1ed625c6f13ad1
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.5/manyfold-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     appVersion: 0.116.1
     created: "2025-06-28T08:13:48.912842567Z"
     dependencies:
@@ -476,6 +501,23 @@ entries:
     type: application
     urls:
     - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.0/manyfold-0.1.0.tgz
+    version: 0.1.0
+  newt:
+  - apiVersion: v2
+    appVersion: 1.2.1
+    created: "2025-06-30T03:16:07.873267531Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 797335e8b3ea6c4e460ed801f7f1accb027f56b7df52cf8447b575253c861fe7
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.0/newt-0.1.0.tgz
     version: 0.1.0
   traccar:
   - apiVersion: v2
@@ -605,4 +647,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-28T08:13:49.088289481Z"
+generated: "2025-06-30T03:16:07.873361929Z"
