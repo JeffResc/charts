@@ -582,6 +582,22 @@ entries:
   newt:
   - apiVersion: v2
     appVersion: 1.2.1
+    created: "2025-07-06T00:12:32.205045242Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 9d5a4198b3067f28e5fd0432ffa74d5935c0052ab61ee3f9c47681191850a423
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.2/newt-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.2.1
     created: "2025-06-30T03:34:58.868826488Z"
     description: Tunneling client for Pangolin - secure WireGuard proxy
     digest: 2570189742f72910826966170be5ef50023885426f72b80402054f53b50e7994
@@ -762,4 +778,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-30T03:34:59.007059561Z"
+generated: "2025-07-06T00:12:32.205147564Z"
