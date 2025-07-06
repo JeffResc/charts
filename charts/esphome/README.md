@@ -138,6 +138,9 @@ helm uninstall esphome
 
 ## Changelog
 
+### 0.1.10
+- Update appVersion to 2025.6.3
+
 ### 0.1.8
 - Added Helm values schema for validation
 
