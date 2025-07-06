@@ -52,6 +52,18 @@ helm uninstall newt
 | `image.repository` | Docker image repository                                       | `fosrl/newt`   |
 | `image.tag`        | Overrides the image tag whose default is the chart appVersion | `""`           |
 
+### Deployment parameters
+
+| Name       | Description                   | Value |
+| ---------- | ----------------------------- | ----- |
+| `replicas` | Number of replicas to deploy  | `1`   |
+
+### Resource parameters
+
+| Name        | Description                                   | Value |
+| ----------- | --------------------------------------------- | ----- |
+| `resources` | Resource limits and requests for the container | `{}`  |
+
 ## Prerequisites
 
 Before installing this chart, you need to create a Kubernetes secret containing your Newt credentials:
@@ -63,6 +75,13 @@ kubectl create secret generic newt-secrets \
 ```
 
 ## Changelog
+
+### 0.1.2
+- Add support for configurable replicas (default: 1)
+- Add support for configurable resources (no defaults)
+
+### 0.1.1
+- Add global object to schema
 
 ### 0.1.0
 - Initial release
