@@ -24,3 +24,11 @@ secret:
 image:
   repository: fosrl/newt
   tag: ""
+
+## @section Deployment parameters
+## @param replicas Number of replicas to deploy
+replicas: 1
+
+## @section Resource parameters
+## @param resources Resource limits and requests for the container
+resources: {}

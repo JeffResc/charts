@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: newt
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicas | default 1 }}
   selector:
     matchLabels:
       app: newt
@@ -15,6 +15,10 @@ spec:
       containers:
         - name: newt
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          {{- if .Values.resources }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- end }}
           env:
             - name: PANGOLIN_ENDPOINT
               value: "{{ .Values.pangolin.endpoint }}"
