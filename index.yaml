@@ -715,6 +715,28 @@ entries:
     version: 0.1.0
   traccar:
   - apiVersion: v2
+    appVersion: 6.8-alpine
+    created: "2025-08-07T13:12:20.739210902Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 061b4e990fdf95f6b7ba2935754c517d3ded2efe5dcfaff670764b2eeed071a1
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.9/traccar-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     appVersion: 6.7-alpine
     created: "2025-06-30T03:34:59.006860677Z"
     dependencies:
@@ -863,4 +885,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-07T13:07:13.858037998Z"
+generated: "2025-08-07T13:12:20.739319968Z"
