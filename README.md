@@ -50,9 +50,9 @@ helm repo update
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/manyfold">manyfold</a></td>
-<td markdown="span">0.1.5</td>
-<td markdown="span">0.116.1</td>
-<td markdown="span">Organize and share your 3d print files</td>
+<td markdown="span">0.1.7</td>
+<td markdown="span">0.120.1</td>
+<td markdown="span">Organize and share your 3D print files</td>
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/newt">newt</a></td>
