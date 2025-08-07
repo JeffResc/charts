@@ -21,7 +21,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.7
+version: 0.1.8
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -31,7 +31,7 @@ appVersion: "0.120.1" # renovate: image=ghcr.io/manyfold3d/manyfold
 
 dependencies:
   - name: redis
-    version: 21.2.6
+    version: 21.2.14
     condition: redis.enabled
     repository: https://charts.bitnami.com/bitnami
   - name: postgresql
