@@ -31,7 +31,7 @@ appVersion: "0.120.1" # renovate: image=ghcr.io/manyfold3d/manyfold
 
 dependencies:
   - name: redis
-    version: 21.2.14
+    version: 23.2.12
     condition: redis.enabled
     repository: https://charts.bitnami.com/bitnami
   - name: postgresql
