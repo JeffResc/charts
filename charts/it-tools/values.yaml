@@ -37,7 +37,7 @@ fullnameOverride: ""
 ## @param image.pullPolicy Container image pull policy
 ## @param image.tag Overrides the image tag whose default is the chart appVersion
 image:
-  repository: ghcr.io/corentinth/it-tools
+  repository: ghcr.io/sharevb/it-tools
   pullPolicy: IfNotPresent
   tag: ""
 
