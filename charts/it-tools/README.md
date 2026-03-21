@@ -1,12 +1,16 @@
 # it-tools
 
-Helm chart for deploying [it-tools](https://github.com/CorentinTh/it-tools).
+Helm chart for deploying [it-tools](https://github.com/sharevb/it-tools).
 
 This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/JeffResc/charts/issues/new).
 
+[it-tools sharebv](https://github.com/sharevb/it-tools) was forked from [it-tools CorentinTh](https://github.com/CorentinTh/it-tools).
+The latest release of [it-tools CorentinTh](https://github.com/CorentinTh/it-tools) was [v2024.10.22-7ca5933](https://github.com/CorentinTh/it-tools/releases/tag/v2024.10.22-7ca5933) on October 22, 2024.
+[it-tools sharebv](https://github.com/sharevb/it-tools) is currently actively maintained.
+
 ## Source code
 
-- https://github.com/CorentinTh/it-tools
+- https://github.com/sharevb/it-tools
 
 ## TL;DR
 ```
@@ -47,7 +51,7 @@ helm uninstall it-tools
 
 | Name               | Description                                                      | Value                         |
 | ------------------ | ---------------------------------------------------------------- | ----------------------------- |
-| `image.repository` | Container image repository                                       | `ghcr.io/corentinth/it-tools` |
+| `image.repository` | Container image repository                                       | `ghcr.io/sharevb/it-tools`    |
 | `image.pullPolicy` | Container image pull policy                                      | `IfNotPresent`                |
 | `image.tag`        | Overrides the image tag whose default is the chart appVersion    | `""`                          |
 
@@ -147,6 +151,12 @@ helm uninstall it-tools
 | `extraContainers` | Provide extra containers for the main pod | `[]`  |
 
 ## Changelog
+
+### 0.1.5
+- Changed the it-tools image from ghcr.io/corentinth/it-tools to ghcr.io/sharevb/it-tools
+
+### 0.1.4
+- update charts/it-tools/values.schema.json
 
 ### 0.1.3
 - Added Helm values schema for validation
