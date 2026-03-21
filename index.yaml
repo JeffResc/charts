@@ -293,6 +293,23 @@ entries:
     version: 0.0.2
   it-tools:
   - apiVersion: v2
+    appVersion: 2026.1.4
+    created: "2026-03-21T12:59:36.264960273Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 0dd136dd74fd23e1bebbdbec2b8fe489265fcd2e3ba087a8d78a4f0ee9ca18a7
+    icon: https://github.com/sharevb/it-tools/blob/ecdf2c1803ef4c9058db4a66b559e913f09f5a77/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/sharevb/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.5/it-tools-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     appVersion: 2024.10.22-7ca5933
     created: "2025-06-30T03:34:58.587914511Z"
     description: Collection of handy online tools for developers, with great UX
@@ -885,4 +902,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-07T13:12:20.739319968Z"
+generated: "2026-03-21T12:59:36.265075929Z"
