@@ -47,7 +47,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
 <td markdown="span">0.1.11</td>
-<td markdown="span">2025.7.5</td>
+<td markdown="span">2026.3.1</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/manyfold">manyfold</a></td>
 <td markdown="span">0.2.0</td>
-<td markdown="span">0.120.1</td>
+<td markdown="span">0.136.0</td>
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/traccar">traccar</a></td>
 <td markdown="span">0.1.9</td>
-<td markdown="span">6.8-alpine</td>
+<td markdown="span">6.12-alpine</td>
 <td markdown="span">Modern GPS Tracking Platform</td>
 </tr>
 </tbody>
