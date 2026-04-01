@@ -61,12 +61,4 @@ kubectl create secret generic newt-secrets \
 
 ## Changelog
 
-### 0.1.2
-- Add support for configurable replicas (default: 1)
-- Add support for configurable resources (no defaults)
-
-### 0.1.1
-- Add global object to schema
-
-### 0.1.0
-- Initial release
+See [CHANGELOG.md](./CHANGELOG.md) for the full release history.

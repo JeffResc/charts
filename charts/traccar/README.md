@@ -98,17 +98,4 @@ helm uninstall traccar
 
 ## Changelog
 
-### 0.1.6
-- Added Helm values schema for validation
-
-### 0.1.3
-- Configuration secret hotfix
-
-### 0.1.2
-- Add support for configuration secrets
-
-### 0.1.1
-- MySQL database integration
-
-### 0.1.0
-- Initial release
+See [CHANGELOG.md](./CHANGELOG.md) for the full release history.
