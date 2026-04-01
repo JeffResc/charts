@@ -50,7 +50,9 @@ jobs:
         run: |
           mkdir -p .chart-packages
           for chart in charts/*/; do
-            helm dependency build "$chart" 2>/dev/null || true
+            if [ -f "$chart/Chart.lock" ]; then
+              helm dependency build "$chart"
+            fi
             helm package "$chart" -d .chart-packages
           done
 
