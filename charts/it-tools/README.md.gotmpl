@@ -1,0 +1,45 @@
+{{ template "chart.header" . }}
+
+Helm chart for deploying [it-tools](https://github.com/sharevb/it-tools).
+
+This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/JeffResc/charts/issues/new).
+
+[it-tools sharebv](https://github.com/sharevb/it-tools) was forked from [it-tools CorentinTh](https://github.com/CorentinTh/it-tools).
+The latest release of [it-tools CorentinTh](https://github.com/CorentinTh/it-tools) was [v2024.10.22-7ca5933](https://github.com/CorentinTh/it-tools/releases/tag/v2024.10.22-7ca5933) on October 22, 2024.
+[it-tools sharebv](https://github.com/sharevb/it-tools) is currently actively maintained.
+
+## Source code
+
+- https://github.com/sharevb/it-tools
+
+## TL;DR
+
+### Using Helm Repository
+```
+helm repo add jeffresc https://charts.jeffresc.dev
+helm repo update
+helm install it-tools jeffresc/it-tools
+```
+
+### Using OCI Registry (GHCR)
+```
+helm install it-tools oci://ghcr.io/jeffresc/charts/it-tools
+```
+
+## Installing the Chart
+To install the chart with the release name `it-tools`
+```
+helm install it-tools jeffresc/it-tools
+```
+
+## Uninstalling the Chart
+To uninstall the `it-tools` deployment
+```
+helm uninstall it-tools
+```
+
+{{ template "chart.valuesSection" . }}
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for the full release history.

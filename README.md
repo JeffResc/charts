@@ -14,12 +14,20 @@ Popular applications, provided by [JeffResc](https://jeffresc.dev), ready to lau
 
 ## TL;DR
 
+### Using Helm Repository
 ```shell
 helm repo add jeffresc https://charts.jeffresc.dev
 helm repo update
+helm install <chart-name> jeffresc/<chart-name>
+```
+
+### Using OCI Registry (GHCR)
+```shell
+helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 ```
 
 ## Available Charts
+<!-- CHARTS_TABLE_START -->
 <table>
 <thead>
 <tr class="header">
@@ -44,15 +52,15 @@ helm repo update
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/it-tools">it-tools</a></td>
-<td markdown="span">0.1.4</td>
-<td markdown="span">2024.10.22-7ca5933</td>
+<td markdown="span">0.1.5</td>
+<td markdown="span">2026.1.4</td>
 <td markdown="span">Collection of handy online tools for developers, with great UX</td>
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/manyfold">manyfold</a></td>
 <td markdown="span">0.1.8</td>
 <td markdown="span">0.120.1</td>
-<td markdown="span">Organize and share your 3D print files</td>
+<td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/newt">newt</a></td>
@@ -68,3 +76,4 @@ helm repo update
 </tr>
 </tbody>
 </table>
+<!-- CHARTS_TABLE_END -->

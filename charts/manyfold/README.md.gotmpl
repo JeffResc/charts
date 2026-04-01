@@ -1,0 +1,41 @@
+{{ template "chart.header" . }}
+
+Helm chart for deploying [manyfold](https://github.com/manyfold3d/manyfold).
+
+This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/JeffResc/charts/issues/new).
+
+## Source code
+
+- https://github.com/manyfold3d/manyfold
+
+## TL;DR
+
+### Using Helm Repository
+```
+helm repo add jeffresc https://charts.jeffresc.dev
+helm repo update
+helm install manyfold jeffresc/manyfold
+```
+
+### Using OCI Registry (GHCR)
+```
+helm install manyfold oci://ghcr.io/jeffresc/charts/manyfold
+```
+
+## Installing the Chart
+To install the chart with the release name `manyfold`
+```
+helm install manyfold jeffresc/manyfold
+```
+
+## Uninstalling the Chart
+To uninstall the `manyfold` deployment
+```
+helm uninstall manyfold
+```
+
+{{ template "chart.valuesSection" . }}
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for the full release history.

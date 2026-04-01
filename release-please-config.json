@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "helm",
+  "separate-pull-requests": true,
+  "include-component-in-tag": true,
+  "skip-github-release": true,
+  "always-bump-patch": true,
+  "changelog-sections": [
+    { "type": "feat", "section": "Features" },
+    { "type": "fix", "section": "Bug Fixes" },
+    { "type": "chore", "section": "Miscellaneous" },
+    { "type": "deps", "section": "Dependencies" }
+  ],
+  "packages": {
+    "charts/13ft": {
+      "component": "13ft"
+    },
+    "charts/esphome": {
+      "component": "esphome"
+    },
+    "charts/it-tools": {
+      "component": "it-tools"
+    },
+    "charts/manyfold": {
+      "component": "manyfold"
+    },
+    "charts/newt": {
+      "component": "newt"
+    },
+    "charts/traccar": {
+      "component": "traccar"
+    }
+  }
+}
