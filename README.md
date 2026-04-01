@@ -58,14 +58,14 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/manyfold">manyfold</a></td>
-<td markdown="span">0.1.8</td>
+<td markdown="span">0.2.0</td>
 <td markdown="span">0.136.0</td>
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/newt">newt</a></td>
 <td markdown="span">0.1.3</td>
-<td markdown="span">1.4.0</td>
+<td markdown="span">1.10.4</td>
 <td markdown="span">Tunneling client for Pangolin - secure WireGuard proxy</td>
 </tr>
 <tr>
