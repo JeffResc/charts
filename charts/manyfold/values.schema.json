@@ -191,7 +191,7 @@
       "type": "array",
       "items": {}
     },
-    "redis": {
+    "valkey": {
       "type": "object",
       "properties": {
         "enabled": {

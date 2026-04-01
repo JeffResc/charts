@@ -140,14 +140,14 @@ volumeMounts: []
 #   readOnly: true
 
 
-## Redis parameters
-redis:
-  # -- Deploy Redis chart
+## Valkey parameters
+valkey:
+  # -- Deploy Valkey chart
   enabled: false
-  # -- Redis architecture
+  # -- Valkey architecture
   architecture: standalone
   auth:
-    # -- Enable Redis authentication
+    # -- Enable Valkey authentication
     enabled: false
 
 ## PostgreSQL parameters
@@ -169,7 +169,7 @@ env:
   SECRET_KEY_BASE:
     value: "super_secret_key"
   REDIS_URL:
-    value: redis://{{ printf "%s-redis-master" .Release.Name }}:6379/1
+    value: redis://{{ printf "%s-valkey-master" .Release.Name }}:6379/1
   DATABASE_ADAPTER:
     value: "postgresql"
   DATABASE_HOST:
