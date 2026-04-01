@@ -1,7 +1,7 @@
 dependencies:
-- name: redis
+- name: valkey
   repository: https://charts.bitnami.com/bitnami
-  version: 21.2.14
+  version: 5.4.9
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 16.7.27
