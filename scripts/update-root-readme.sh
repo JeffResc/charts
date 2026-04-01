@@ -50,7 +50,7 @@ print(d.get('description', ''))
 
   TABLE+="
 <tr>
-<td markdown=\"span\"><a href=\"https://github.com/JeffResc/charts/tree/main/charts/${name}\">${name}</a></td>
+<td markdown=\"span\">${name}</td>
 <td markdown=\"span\">${version}</td>
 <td markdown=\"span\">${app_version}</td>
 <td markdown=\"span\">${description}</td>
