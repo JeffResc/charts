@@ -1,8 +1,9 @@
 name: Regenerate Docs
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push:
+    branches:
+      - main
     paths:
       - "charts/**"
 
@@ -10,15 +11,10 @@ jobs:
   regenerate-docs:
     permissions:
       contents: write
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PR branch
+      - name: Checkout
         uses: actions/checkout@v6
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure Git
         run: |
@@ -43,7 +39,7 @@ jobs:
         run: |
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "chore: regenerate docs"
+            git commit -m "chore: regenerate docs [skip ci]"
             git push
           else
             echo "No changes to commit"
