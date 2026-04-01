@@ -91,8 +91,6 @@ ingress:
   tls: []
 
 ## Resources parameters
-## @extra resources.limits.cpu Maximum CPU allowed
-## @extra resources.limits.memory Maximum memory allowed
 resources: {}
 
 ## Probe parameters

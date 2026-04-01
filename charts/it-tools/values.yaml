@@ -42,8 +42,6 @@ image:
   tag: ""
 
 ## Metrics parameters
-## @extra metrics.resources.limits.cpu Maximum CPU allowed
-## @extra metrics.resources.limits.memory Maximum memory allowed
 metrics:
   # -- Enables metrics
   enabled: false
@@ -140,8 +138,6 @@ ingress:
   tls: []
 
 ## Resources parameters
-## @extra resources.limits.cpu Maximum CPU allowed
-## @extra resources.limits.memory Maximum memory allowed
 resources: {}
 
 ## Autoscaling parameters
