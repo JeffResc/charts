@@ -56,21 +56,22 @@ jobs:
 
       - name: Package charts
         run: |
-          mkdir -p .chart-packages
+          mkdir -p /tmp/chart-packages
           for chart in charts/*/; do
             if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
               helm dependency update "$chart"
             fi
-            helm package "$chart" -d .chart-packages
+            helm package "$chart" -d /tmp/chart-packages
           done
 
       - name: Update gh-pages Helm repo index
         run: |
           git fetch origin gh-pages
+          git stash --include-untracked
           git switch gh-pages
 
           # Copy packaged charts
-          cp .chart-packages/*.tgz . 2>/dev/null || true
+          cp /tmp/chart-packages/*.tgz .
 
           # Merge into existing index (--merge preserves old entries)
           helm repo index . --url https://charts.jeffresc.dev --merge index.yaml
@@ -91,7 +92,7 @@ jobs:
 
       - name: Push charts to GHCR
         run: |
-          for pkg in .chart-packages/*.tgz; do
+          for pkg in /tmp/chart-packages/*.tgz; do
             [ -f "$pkg" ] || continue
             helm push "$pkg" oci://ghcr.io/jeffresc/charts
           done
