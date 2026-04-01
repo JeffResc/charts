@@ -42,6 +42,14 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v5
 
+      - name: Regenerate docs
+        run: |
+          HELM_DOCS_VERSION="1.14.2"
+          curl -sSL "https://github.com/norwoodj/helm-docs/releases/download/v${HELM_DOCS_VERSION}/helm-docs_${HELM_DOCS_VERSION}_Linux_x86_64.tar.gz" | tar xz -C /usr/local/bin helm-docs
+          pip install pyyaml
+          helm-docs --chart-search-root charts/
+          ./scripts/update-root-readme.sh
+
       - name: Add dependency repos
         run: |
           # Dynamically discover and add all unique Helm dependency repos from Chart.yaml files
