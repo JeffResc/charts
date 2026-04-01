@@ -47,7 +47,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
 <td markdown="span">0.1.11</td>
-<td markdown="span">2025.7.5</td>
+<td markdown="span">2025.12.7</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
 </tr>
 <tr>
