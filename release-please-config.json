@@ -3,7 +3,6 @@
   "release-type": "helm",
   "separate-pull-requests": true,
   "include-component-in-tag": true,
-  "skip-github-release": true,
   "always-bump-patch": true,
   "changelog-sections": [
     { "type": "feat", "section": "Features" },
