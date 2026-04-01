@@ -80,9 +80,6 @@ helm uninstall manyfold
 | postgresql.global.postgresql.auth.username | string | `"manyfold"` | Database username |
 | readinessProbe.httpGet.path | string | `"/health"` | HTTP path for the readiness probe |
 | readinessProbe.httpGet.port | string | `"http"` | Port name or number for the readiness probe |
-| valkey.architecture | string | `"standalone"` | Valkey architecture |
-| valkey.auth.enabled | bool | `false` | Enable Valkey authentication |
-| valkey.enabled | bool | `false` | Deploy Valkey chart |
 | replicaCount | int | `1` | Number of replicas of the manyfold Deployment |
 | resources | object | `{}` |  |
 | securityContext | object | `{}` | Container security context |
@@ -93,6 +90,9 @@ helm uninstall manyfold
 | serviceAccount.create | bool | `false` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` | Tolerations for pod assignment |
+| valkey.architecture | string | `"standalone"` | Valkey architecture |
+| valkey.auth.enabled | bool | `false` | Enable Valkey authentication |
+| valkey.enabled | bool | `false` | Deploy Valkey chart |
 | volumeMounts | list | `[]` | Additional volume mounts for the main pod |
 | volumes | list | `[]` | Provide extra volumes for the main pod |
 
