@@ -42,15 +42,25 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v5
 
-      - name: Add Bitnami Helm repo
+      - name: Add dependency repos
         run: |
-          helm repo add bitnami https://charts.bitnami.com/bitnami
+          # Dynamically discover and add all unique Helm dependency repos from Chart.yaml files
+          grep -rh '^\s*repository:' charts/*/Chart.yaml 2>/dev/null \
+            | sed 's/.*repository:[[:space:]]*//' | tr -d '"' | tr -d "'" \
+            | grep '^https://' | sort -u \
+            | while read -r url; do
+                name=$(echo "$url" | md5sum | cut -c1-8)
+                echo "Adding repo $name -> $url"
+                helm repo add "$name" "$url"
+              done
 
       - name: Package charts
         run: |
           mkdir -p .chart-packages
           for chart in charts/*/; do
-            helm dependency build "$chart" 2>/dev/null || true
+            if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
+              helm dependency update "$chart"
+            fi
             helm package "$chart" -d .chart-packages
           done
 
