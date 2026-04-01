@@ -1,0 +1,98 @@
+name: Auto-Update Charts
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "charts/*/Chart.yaml"
+
+jobs:
+  auto-update:
+    # Only run on Renovate PRs or PRs labeled 'auto-update'
+    if: startsWith(github.head_ref, 'renovate/') || contains(github.event.pull_request.labels.*.name, 'auto-update')
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Detect changed charts
+        id: changes
+        run: |
+          # Get the list of charts with changed Chart.yaml
+          CHANGED_CHARTS=""
+          for chart_dir in charts/*/; do
+            chart_name=$(basename "$chart_dir")
+            chart_yaml="${chart_dir}Chart.yaml"
+
+            # Check if this Chart.yaml was modified in this PR
+            if git diff origin/${{ github.base_ref }}...HEAD --name-only | grep -q "^${chart_yaml}$"; then
+              # Check if appVersion specifically changed
+              OLD_APP_VERSION=$(git show origin/${{ github.base_ref }}:"${chart_yaml}" | grep '^appVersion:' | head -1 | sed 's/appVersion:[[:space:]]*//' | sed 's/"//g' | sed 's/#.*//' | xargs)
+              NEW_APP_VERSION=$(grep '^appVersion:' "${chart_yaml}" | head -1 | sed 's/appVersion:[[:space:]]*//' | sed 's/"//g' | sed 's/#.*//' | xargs)
+
+              if [[ "$OLD_APP_VERSION" != "$NEW_APP_VERSION" ]]; then
+                CHANGED_CHARTS="${CHANGED_CHARTS}${chart_name}:${NEW_APP_VERSION} "
+              fi
+            fi
+          done
+
+          echo "changed=$CHANGED_CHARTS" >> "$GITHUB_OUTPUT"
+          echo "Changed charts: $CHANGED_CHARTS"
+
+      - name: Bump chart versions and update changelogs
+        if: steps.changes.outputs.changed != ''
+        run: |
+          for entry in ${{ steps.changes.outputs.changed }}; do
+            chart_name="${entry%%:*}"
+            new_app_version="${entry##*:}"
+            chart_dir="charts/${chart_name}"
+
+            echo "Processing ${chart_name}: appVersion -> ${new_app_version}"
+
+            # Bump chart version
+            NEW_VERSION=$(./scripts/bump-chart-version.sh "$chart_dir")
+            echo "Bumped ${chart_name} chart version to ${NEW_VERSION}"
+
+            # Update changelog
+            ./scripts/update-changelog.sh "$chart_dir" "$NEW_VERSION" "$new_app_version"
+          done
+
+      - name: Install tools
+        if: steps.changes.outputs.changed != ''
+        run: |
+          HELM_DOCS_VERSION="1.14.2"
+          curl -sSL "https://github.com/norwoodj/helm-docs/releases/download/v${HELM_DOCS_VERSION}/helm-docs_${HELM_DOCS_VERSION}_Linux_x86_64.tar.gz" | tar xz -C /usr/local/bin helm-docs
+          pip install pyyaml
+
+      - name: Regenerate READMEs
+        if: steps.changes.outputs.changed != ''
+        run: |
+          helm-docs --chart-search-root charts/
+
+      - name: Update root README
+        if: steps.changes.outputs.changed != ''
+        run: |
+          ./scripts/update-root-readme.sh
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed != ''
+        run: |
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-bump chart versions and regenerate docs"
+            git push
+          else
+            echo "No changes to commit"
+          fi

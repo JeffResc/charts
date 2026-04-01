@@ -1,0 +1,45 @@
+{{ template "chart.header" . }}
+
+Helm chart for deploying [13ft](https://github.com/wasi-master/13ft).
+
+This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/JeffResc/charts/issues/new).
+
+## Source code
+
+- https://github.com/wasi-master/13ft
+
+## TL;DR
+
+### Using Helm Repository
+```
+helm repo add jeffresc https://charts.jeffresc.dev
+helm repo update
+helm install 13ft jeffresc/13ft
+```
+
+### Using OCI Registry (GHCR)
+```
+helm install 13ft oci://ghcr.io/jeffresc/charts/13ft
+```
+
+## Installing the Chart
+To install the chart with the release name `13ft`
+```
+helm install 13ft jeffresc/13ft
+```
+
+## Uninstalling the Chart
+To uninstall the `13ft` deployment
+```
+helm uninstall 13ft
+```
+
+{{ template "chart.valuesSection" . }}
+
+## Changelog
+
+### 0.1.1
+- Added Helm values schema for validation
+
+### 0.1.0
+- Initial release

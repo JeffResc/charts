@@ -2,33 +2,33 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-## @section Pangolin parameters
-## @param pangolin.endpoint Pangolin server endpoint URL
+## Pangolin parameters
 pangolin:
+  # -- Pangolin server endpoint URL
   endpoint: "https://pangolin.example.com"
 
-## @section Secret parameters
-## @param secret.name Name of the secret containing Newt credentials
-## @param secret.id.key Key in the secret for Newt ID
-## @param secret.secret.key Key in the secret for Newt secret
+## Secret parameters
 secret:
+  # -- Name of the secret containing Newt credentials
   name: newt-secrets
   id:
+    # -- Key in the secret for Newt ID
     key: newt_id
   secret:
+    # -- Key in the secret for Newt secret
     key: newt_secret
 
-## @section Image parameters
-## @param image.repository Docker image repository
-## @param image.tag Overrides the image tag whose default is the chart appVersion
+## Image parameters
 image:
+  # -- Docker image repository
   repository: fosrl/newt
+  # -- Overrides the image tag whose default is the chart appVersion
   tag: ""
 
-## @section Deployment parameters
-## @param replicas Number of replicas to deploy
+## Deployment parameters
+# -- Number of replicas to deploy
 replicas: 1
 
-## @section Resource parameters
-## @param resources Resource limits and requests for the container
+## Resource parameters
+# -- Resource limits and requests for the container
 resources: {}

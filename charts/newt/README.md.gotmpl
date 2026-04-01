@@ -1,4 +1,4 @@
-# newt
+{{ template "chart.header" . }}
 
 Helm chart for deploying [newt](https://github.com/fosrl/newt).
 
@@ -36,18 +36,7 @@ To uninstall the `newt` deployment
 helm uninstall newt
 ```
 
-## Values
-
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| image.repository | string | `"fosrl/newt"` | Docker image repository |
-| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion |
-| pangolin.endpoint | string | `"https://pangolin.example.com"` | Pangolin server endpoint URL |
-| replicas | int | `1` | Number of replicas to deploy |
-| resources | object | `{}` | Resource limits and requests for the container |
-| secret.id.key | string | `"newt_id"` | Key in the secret for Newt ID |
-| secret.name | string | `"newt-secrets"` | Name of the secret containing Newt credentials |
-| secret.secret.key | string | `"newt_secret"` | Key in the secret for Newt secret |
+{{ template "chart.valuesSection" . }}
 
 ## Prerequisites
 
