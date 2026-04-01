@@ -58,8 +58,8 @@ jobs:
         run: |
           mkdir -p .chart-packages
           for chart in charts/*/; do
-            if [ -f "$chart/Chart.lock" ]; then
-              helm dependency build "$chart"
+            if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
+              helm dependency update "$chart"
             fi
             helm package "$chart" -d .chart-packages
           done
