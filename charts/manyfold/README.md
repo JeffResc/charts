@@ -49,7 +49,7 @@ helm uninstall manyfold
 | env.DATABASE_PASSWORD | object | `{"value":"{{ .Values.postgresql.global.postgresql.auth.password }}"}` | You should provide your own secret outside of this helm-chart and use `postgresql.global.postgresql.auth.existingSecret` to provide credentials to the postgresql instance |
 | env.DATABASE_PORT.value | string | `"5432"` |  |
 | env.DATABASE_USER.value | string | `"{{ .Values.postgresql.global.postgresql.auth.username }}"` |  |
-| env.REDIS_URL.value | string | `"redis://{{ printf \"%s-redis-master\" .Release.Name }}:6379/1"` |  |
+| env.REDIS_URL.value | string | `"redis://{{ printf \"%s-valkey-master\" .Release.Name }}:6379/1"` |  |
 | env.SECRET_KEY_BASE.value | string | `"super_secret_key"` |  |
 | fullnameOverride | string | `""` | Full name override |
 | image.pullPolicy | string | `"IfNotPresent"` | Container image pull policy |
@@ -80,9 +80,9 @@ helm uninstall manyfold
 | postgresql.global.postgresql.auth.username | string | `"manyfold"` | Database username |
 | readinessProbe.httpGet.path | string | `"/health"` | HTTP path for the readiness probe |
 | readinessProbe.httpGet.port | string | `"http"` | Port name or number for the readiness probe |
-| redis.architecture | string | `"standalone"` | Redis architecture |
-| redis.auth.enabled | bool | `false` | Enable Redis authentication |
-| redis.enabled | bool | `false` | Deploy Redis chart |
+| valkey.architecture | string | `"standalone"` | Valkey architecture |
+| valkey.auth.enabled | bool | `false` | Enable Valkey authentication |
+| valkey.enabled | bool | `false` | Deploy Valkey chart |
 | replicaCount | int | `1` | Number of replicas of the manyfold Deployment |
 | resources | object | `{}` |  |
 | securityContext | object | `{}` | Container security context |
