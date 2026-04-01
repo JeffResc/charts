@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert @param/@section annotations in values.yaml to helm-docs # -- format."""
+"""Convert Bitnami-style @param/@section annotations in values.yaml to helm-docs # -- format."""
 import re
 import sys
 
