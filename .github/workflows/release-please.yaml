@@ -12,7 +12,73 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      pr: ${{ steps.release.outputs.pr }}
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: release-please
+    if: needs.release-please.outputs.releases_created == 'true'
+    permissions:
+      contents: write
+      pages: write
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+
+      - name: Helm Repo Add Bitnami
+        run: |
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.7.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          charts_dir: charts/
+          skip_existing: true
+
+      - name: Login to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Package and push charts to GHCR
+        run: |
+          for chart in charts/*/; do
+            chart_name=$(basename "$chart")
+            helm dependency build "$chart" 2>/dev/null || true
+            helm package "$chart" -d .cr-release-packages
+          done
+          for pkg in .cr-release-packages/*.tgz; do
+            [ -f "$pkg" ] || continue
+            helm push "$pkg" oci://ghcr.io/jeffresc/charts
+          done
+
+      - name: Copy README to gh-pages
+        run: |
+          git fetch origin gh-pages
+          git switch gh-pages
+          git checkout main -- README.md
+          if ! git diff --quiet HEAD README.md; then
+            git add README.md
+            git commit -m "Update README on gh-pages"
+            git push origin gh-pages
+          fi
+          git switch -
