@@ -71,7 +71,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/traccar">traccar</a></td>
 <td markdown="span">0.1.9</td>
-<td markdown="span">6.8-alpine</td>
+<td markdown="span">6.12-alpine</td>
 <td markdown="span">Modern GPS Tracking Platform</td>
 </tr>
 </tbody>
