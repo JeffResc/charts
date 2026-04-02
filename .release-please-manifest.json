@@ -1,8 +1,8 @@
 {
   "charts/13ft": "0.2.0",
-  "charts/esphome": "0.1.11",
+  "charts/esphome": "0.2.0",
   "charts/it-tools": "0.1.4",
   "charts/manyfold": "0.1.8",
-  "charts/newt": "0.1.3",
+  "charts/newt": "0.2.0",
   "charts/traccar": "0.1.7"
 }
