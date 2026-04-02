@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/JeffResc/charts/compare/manyfold-1.0.0...manyfold-1.0.1) (2026-04-02)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/manyfold3d/manyfold docker tag to v0.136.0 ([2ee3079](https://github.com/JeffResc/charts/commit/2ee30793206973c9ce424841861689e9ba15fb85))
+* **deps:** update helm release postgresql to v18 ([0ca7ad5](https://github.com/JeffResc/charts/commit/0ca7ad5ee2521c23b8e49f2d8231234df4be8ea1))
+
 ## [1.0.0](https://github.com/JeffResc/charts/compare/manyfold-0.1.8...manyfold-1.0.0) (2026-04-02)
 
 
