@@ -14,12 +14,23 @@ Popular applications, provided by [JeffResc](https://jeffresc.dev), ready to lau
 
 ## TL;DR
 
+### Using Helm Repository
 ```shell
 helm repo add jeffresc https://charts.jeffresc.dev
 helm repo update
+helm install <chart-name> jeffresc/<chart-name>
+```
+
+### Using OCI Registry (GHCR)
+```shell
+helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 ```
 
 ## Available Charts
+
+> For full documentation including parameters and changelogs, visit [charts.jeffresc.dev](https://charts.jeffresc.dev).
+
+<!-- CHARTS_TABLE_START -->
 <table>
 <thead>
 <tr class="header">
@@ -31,40 +42,41 @@ helm repo update
 </thead>
 <tbody>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/13ft">13ft</a></td>
+<td markdown="span">13ft</td>
 <td markdown="span">0.1.2</td>
 <td markdown="span">0.3.4</td>
 <td markdown="span">Custom 12ft.io replacement</td>
 </tr>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/esphome">esphome</a></td>
-<td markdown="span">0.1.11</td>
-<td markdown="span">2025.7.5</td>
+<td markdown="span">esphome</td>
+<td markdown="span">0.2.0</td>
+<td markdown="span">2026.3.2</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
 </tr>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/it-tools">it-tools</a></td>
-<td markdown="span">0.1.4</td>
-<td markdown="span">2024.10.22-7ca5933</td>
+<td markdown="span">it-tools</td>
+<td markdown="span">0.1.5</td>
+<td markdown="span">2026.1.4</td>
 <td markdown="span">Collection of handy online tools for developers, with great UX</td>
 </tr>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/manyfold">manyfold</a></td>
-<td markdown="span">0.1.8</td>
-<td markdown="span">0.120.1</td>
-<td markdown="span">Organize and share your 3D print files</td>
+<td markdown="span">manyfold</td>
+<td markdown="span">0.2.0</td>
+<td markdown="span">0.136.0</td>
+<td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/newt">newt</a></td>
-<td markdown="span">0.1.3</td>
-<td markdown="span">1.4.0</td>
+<td markdown="span">newt</td>
+<td markdown="span">0.2.0</td>
+<td markdown="span">1.10.4</td>
 <td markdown="span">Tunneling client for Pangolin - secure WireGuard proxy</td>
 </tr>
 <tr>
-<td markdown="span"><a href="https://github.com/JeffResc/charts/tree/main/charts/traccar">traccar</a></td>
+<td markdown="span">traccar</td>
 <td markdown="span">0.1.9</td>
-<td markdown="span">6.8-alpine</td>
+<td markdown="span">6.12-alpine</td>
 <td markdown="span">Modern GPS Tracking Platform</td>
 </tr>
 </tbody>
 </table>
+<!-- CHARTS_TABLE_END -->

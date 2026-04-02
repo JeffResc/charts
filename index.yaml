@@ -3,9 +3,9 @@ entries:
   13ft:
   - apiVersion: v2
     appVersion: 0.3.4
-    created: "2025-06-30T03:34:58.356449122Z"
+    created: "2026-04-02T00:16:48.148079661Z"
     description: Custom 12ft.io replacement
-    digest: 56268c90dbf45a15251f9706fcb3feeb32c2ef81abe3404c70c1f2436231092a
+    digest: 2deff14873cd97425d2a41c48534aa72c3f2bb7840cadf0403e860846cc92409
     maintainers:
     - email: jeff@jeffresc.dev
       name: Jeff Rescignano
@@ -15,7 +15,7 @@ entries:
     - https://github.com/traccar/traccar
     type: application
     urls:
-    - https://github.com/JeffResc/charts/releases/download/13ft-0.1.2/13ft-0.1.2.tgz
+    - https://charts.jeffresc.dev/13ft-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.3.4
@@ -50,6 +50,25 @@ entries:
     - https://github.com/JeffResc/charts/releases/download/13ft-0.1.0/13ft-0.1.0.tgz
     version: 0.1.0
   esphome:
+  - apiVersion: v2
+    appVersion: 2026.3.2
+    created: "2026-04-02T00:16:48.14861307Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 1e7054da5c037784553d4fb532860ac3b4e18d15fe4eb1d2488dcc56bb7baf3f
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/esphome-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 2025.6.3
     created: "2025-07-06T00:16:17.371163123Z"
@@ -294,9 +313,9 @@ entries:
   it-tools:
   - apiVersion: v2
     appVersion: 2026.1.4
-    created: "2026-03-21T12:59:36.264960273Z"
+    created: "2026-04-02T00:16:48.14922698Z"
     description: Collection of handy online tools for developers, with great UX
-    digest: 0dd136dd74fd23e1bebbdbec2b8fe489265fcd2e3ba087a8d78a4f0ee9ca18a7
+    digest: 4196ce038a073189f8bd377746da38f4b38c542582cdd708f2c829222325fde8
     icon: https://github.com/sharevb/it-tools/blob/ecdf2c1803ef4c9058db4a66b559e913f09f5a77/public/mstile-310x310.png
     maintainers:
     - email: jeff@jeffresc.dev
@@ -307,7 +326,7 @@ entries:
     - https://github.com/sharevb/it-tools
     type: application
     urls:
-    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.5/it-tools-0.1.5.tgz
+    - https://charts.jeffresc.dev/it-tools-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v2
     appVersion: 2024.10.22-7ca5933
@@ -440,6 +459,31 @@ entries:
     - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
     version: 0.0.1
   manyfold:
+  - apiVersion: v2
+    appVersion: 0.136.0
+    created: "2026-04-02T00:16:48.160925823Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.4.9
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.5.15
+    description: Organize and share your 3d print files
+    digest: a926994f3eb46ec91fad342c5e5a92a0f178636c18dddff6b655079d12dd7e10
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/manyfold-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 0.120.1
     created: "2025-08-07T13:07:13.857927371Z"
@@ -667,6 +711,22 @@ entries:
     version: 0.1.0
   newt:
   - apiVersion: v2
+    appVersion: 1.10.4
+    created: "2026-04-02T00:16:48.161188475Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 58054d83e9f49afc0b2bb0d4371c28b2f949d4760d149c0ad24f9ee5a4423b36
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/newt-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.4.0
     created: "2025-08-07T13:04:05.560498072Z"
     description: Tunneling client for Pangolin - secure WireGuard proxy
@@ -732,15 +792,15 @@ entries:
     version: 0.1.0
   traccar:
   - apiVersion: v2
-    appVersion: 6.8-alpine
-    created: "2025-08-07T13:12:20.739210902Z"
+    appVersion: 6.12-alpine
+    created: "2026-04-02T00:16:48.165328921Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
       repository: https://charts.bitnami.com/bitnami
       version: 12.3.5
     description: Modern GPS Tracking Platform
-    digest: 061b4e990fdf95f6b7ba2935754c517d3ded2efe5dcfaff670764b2eeed071a1
+    digest: 7270846f3e28ac2bcb9c38ff88fbd48df05bab7206bb40a4b568286187ed1817
     icon: https://avatars.githubusercontent.com/u/37892282
     maintainers:
     - email: jeff@jeffresc.dev
@@ -751,7 +811,7 @@ entries:
     - https://github.com/traccar/traccar
     type: application
     urls:
-    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.9/traccar-0.1.9.tgz
+    - https://charts.jeffresc.dev/traccar-0.1.9.tgz
     version: 0.1.9
   - apiVersion: v2
     appVersion: 6.7-alpine
@@ -902,4 +962,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-21T12:59:36.265075929Z"
+generated: "2026-04-02T00:16:48.147495246Z"
