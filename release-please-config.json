@@ -4,7 +4,6 @@
   "separate-pull-requests": true,
   "include-component-in-tag": true,
   "include-v-in-tag": false,
-  "always-bump-patch": true,
   "changelog-sections": [
     { "type": "feat", "section": "Features" },
     { "type": "fix", "section": "Bug Fixes" },
@@ -13,22 +12,28 @@
   ],
   "packages": {
     "charts/13ft": {
-      "component": "13ft"
+      "component": "13ft",
+      "paths": ["charts/13ft"]
     },
     "charts/esphome": {
-      "component": "esphome"
+      "component": "esphome",
+      "paths": ["charts/esphome"]
     },
     "charts/it-tools": {
-      "component": "it-tools"
+      "component": "it-tools",
+      "paths": ["charts/it-tools"]
     },
     "charts/manyfold": {
-      "component": "manyfold"
+      "component": "manyfold",
+      "paths": ["charts/manyfold"]
     },
     "charts/newt": {
-      "component": "newt"
+      "component": "newt",
+      "paths": ["charts/newt"]
     },
     "charts/traccar": {
-      "component": "traccar"
+      "component": "traccar",
+      "paths": ["charts/traccar"]
     }
   }
 }
