@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/esphome-0.2.0...esphome-0.2.1) (2026-04-02)
+
+
+### Miscellaneous
+
+* **main:** release esphome 0.2.0 ([fa33198](https://github.com/JeffResc/charts/commit/fa33198fb763743454398c02744d0c93536aad94))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/esphome-0.1.11...esphome-0.2.0) (2026-04-02)
 
 
