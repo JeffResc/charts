@@ -1,0 +1,168 @@
+# Default values for govee2mqtt.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+## Global parameters
+# -- Number of replicas of the govee2mqtt Deployment
+replicaCount: 1
+
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+## NOTE: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
+##
+# -- Affinity for pod assignment
+affinity: {}
+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+##
+# -- Node labels for pod assignment
+nodeSelector: {}
+## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+##
+# -- Tolerations for pod assignment
+tolerations: []
+
+# -- Additional annotations for the Pod resource
+podAnnotations: {}
+# -- Additional labels for the Pod resource
+podLabels: {}
+
+# -- Docker registry pull secrets
+imagePullSecrets: []
+# -- Name override
+nameOverride: ""
+# -- Full name override
+fullnameOverride: ""
+
+## Image parameters
+image:
+  # -- Container image repository
+  repository: ghcr.io/wez/govee2mqtt
+  # -- Container image pull policy
+  pullPolicy: IfNotPresent
+  # -- Overrides the image tag whose default is the chart appVersion
+  tag: ""
+
+## Service account parameters
+serviceAccount:
+  # -- Specifies whether a service account should be created
+  create: false
+  # -- Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # -- Additional annotations for the ServiceAccount resource
+  annotations: {}
+  # -- The name of the service account to use. If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+## Pod security context parameters
+podSecurityContext:
+  # -- Group to mount volumes in as
+  fsGroup: 1000
+
+## Security context parameters
+securityContext:
+  capabilities:
+    # -- Capabilities to drop
+    drop:
+    - ALL
+  # -- If root filesystem should be read-only
+  readOnlyRootFilesystem: true
+  # -- If container should be run as non-root
+  runAsNonRoot: true
+  # -- User to run container as
+  runAsUser: 1000
+
+## Host networking parameters
+## Host networking is required for govee2mqtt to discover Govee devices on the local network
+##
+# -- Enable host networking for Govee device discovery
+hostNetwork: false
+# -- DNS policy for the pod
+dnsPolicy: ClusterFirstWithHostNet
+
+## Resources parameters
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+## Govee API parameters
+govee:
+  # -- Name of an existing secret containing Govee credentials. If set, email, password, and apiKey values below are ignored
+  existingSecret: ""
+  ## Keys in the existing secret for each credential
+  existingSecretKeys:
+    # -- Key in the existing secret for the Govee email
+    email: "GOVEE_EMAIL"
+    # -- Key in the existing secret for the Govee password
+    password: "GOVEE_PASSWORD"
+    # -- Key in the existing secret for the Govee API key
+    apiKey: "GOVEE_API_KEY"
+
+  # -- Govee account email (only used if existingSecret is not set)
+  email: ""
+  # -- Govee account password (only used if existingSecret is not set)
+  password: ""
+  # -- Govee API key (only used if existingSecret is not set)
+  apiKey: ""
+
+  # -- Temperature scale: "C" for Celsius or "F" for Fahrenheit
+  temperatureScale: "F"
+
+## MQTT parameters
+mqtt:
+  # -- Name of an existing secret containing MQTT credentials. If set, user and password values below are ignored
+  existingSecret: ""
+  ## Keys in the existing secret for MQTT credentials
+  existingSecretKeys:
+    # -- Key in the existing secret for the MQTT username
+    user: "GOVEE_MQTT_USER"
+    # -- Key in the existing secret for the MQTT password
+    password: "GOVEE_MQTT_PASSWORD"
+
+  # -- MQTT broker hostname
+  host: "mqtt"
+  # -- MQTT broker port
+  port: 1883
+  # -- MQTT username (only used if existingSecret is not set)
+  user: ""
+  # -- MQTT password (only used if existingSecret is not set)
+  password: ""
+
+## Logging parameters
+logging:
+  # -- Enable colored output (always, never, auto)
+  style: "always"
+  # -- Log level (e.g., "govee=info", "govee=debug", "govee=trace")
+  level: "govee=info"
+
+# -- Timezone for log timestamps (e.g., "America/New_York", "Europe/London", "UTC")
+timezone: "UTC"
+
+# -- Additional environment variables
+extraEnv: []
+  # - name: CUSTOM_VAR
+  #   value: "custom_value"
+
+# -- Environment variables from secrets or configmaps
+extraEnvFrom: []
+  # - secretRef:
+  #     name: my-secret
+  # - configMapRef:
+  #     name: my-configmap
+
+## Persistence parameters
+persistence:
+  # -- If persistence is enabled
+  enabled: false
+  # -- Persistent storage PVC storage class
+  # storageClass: "-"
+  # -- Persistent storage PVC access mode
+  accessMode: ReadWriteOnce
+  # -- Persistent storage PVC size
+  size: 1Gi
+  # -- Persistent storage existing PVC name
+  # existingClaim: ""
+  # -- Persistent storage mount path
+  # mountPath: /data

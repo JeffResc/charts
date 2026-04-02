@@ -1,0 +1,158 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "govee2mqtt.fullname" . }}
+  labels:
+    {{- include "govee2mqtt.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "govee2mqtt.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/secret.yaml") . | sha256sum }}
+        {{- with .Values.podAnnotations }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+      labels:
+        {{- include "govee2mqtt.labels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "govee2mqtt.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      hostNetwork: {{ .Values.hostNetwork }}
+      dnsPolicy: {{ .Values.dnsPolicy }}
+      containers:
+      - name: {{ .Chart.Name }}
+        securityContext:
+          {{- toYaml .Values.securityContext | nindent 12 }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+        # MQTT Configuration
+        - name: GOVEE_MQTT_HOST
+          value: {{ .Values.mqtt.host | quote }}
+        - name: GOVEE_MQTT_PORT
+          value: {{ .Values.mqtt.port | quote }}
+        {{- if .Values.mqtt.existingSecret }}
+        - name: GOVEE_MQTT_USER
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.mqtt.existingSecret }}
+              key: {{ .Values.mqtt.existingSecretKeys.user }}
+              optional: true
+        - name: GOVEE_MQTT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.mqtt.existingSecret }}
+              key: {{ .Values.mqtt.existingSecretKeys.password }}
+              optional: true
+        {{- else if or .Values.mqtt.user .Values.mqtt.password }}
+        - name: GOVEE_MQTT_USER
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "govee2mqtt.fullname" . }}
+              key: mqtt-user
+              optional: true
+        - name: GOVEE_MQTT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "govee2mqtt.fullname" . }}
+              key: mqtt-password
+              optional: true
+        {{- end }}
+        # Govee API Configuration
+        {{- if .Values.govee.existingSecret }}
+        - name: GOVEE_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.govee.existingSecret }}
+              key: {{ .Values.govee.existingSecretKeys.email }}
+              optional: true
+        - name: GOVEE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.govee.existingSecret }}
+              key: {{ .Values.govee.existingSecretKeys.password }}
+              optional: true
+        - name: GOVEE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.govee.existingSecret }}
+              key: {{ .Values.govee.existingSecretKeys.apiKey }}
+              optional: true
+        {{- else if or .Values.govee.email .Values.govee.password .Values.govee.apiKey }}
+        - name: GOVEE_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "govee2mqtt.fullname" . }}
+              key: govee-email
+              optional: true
+        - name: GOVEE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "govee2mqtt.fullname" . }}
+              key: govee-password
+              optional: true
+        - name: GOVEE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "govee2mqtt.fullname" . }}
+              key: govee-api-key
+              optional: true
+        {{- end }}
+        # Other Configuration
+        - name: GOVEE_TEMPERATURE_SCALE
+          value: {{ .Values.govee.temperatureScale | quote }}
+        - name: RUST_LOG_STYLE
+          value: {{ .Values.logging.style | quote }}
+        - name: RUST_LOG
+          value: {{ .Values.logging.level | quote }}
+        - name: TZ
+          value: {{ .Values.timezone | quote }}
+        {{- with .Values.extraEnv }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        {{- with .Values.extraEnvFrom }}
+        envFrom:
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+        {{- if .Values.persistence.enabled }}
+        volumeMounts:
+        - name: data
+          mountPath: {{ .Values.persistence.mountPath | default "/data" }}
+        {{- end }}
+        resources:
+          {{- toYaml .Values.resources | nindent 12 }}
+      {{- if .Values.persistence.enabled }}
+      volumes:
+      - name: data
+        {{- if .Values.persistence.existingClaim }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.persistence.existingClaim }}
+        {{- else }}
+        persistentVolumeClaim:
+          claimName: {{ include "govee2mqtt.fullname" . }}
+        {{- end }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
