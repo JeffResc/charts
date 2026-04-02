@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/traccar-0.2.0...traccar-0.2.1) (2026-04-02)
+
+
+### Miscellaneous
+
+* **deps:** update traccar/traccar docker tag to v6.12 ([aae81ac](https://github.com/JeffResc/charts/commit/aae81acc582629a2bf6700eef4e80c2c17661f9a))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/traccar-0.1.7...traccar-0.2.0) (2026-04-02)
 
 
