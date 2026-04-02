@@ -3,6 +3,22 @@ entries:
   13ft:
   - apiVersion: v2
     appVersion: 0.3.4
+    created: "2026-04-02T01:19:24.397771988Z"
+    description: Custom 12ft.io replacement
+    digest: df6ba7bb7e463c6313191fbe2828ca87f164f4f54af4c51d569b4a7071b61034
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: 13ft
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/13ft-0.2.0/13ft-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.3.4
     created: "2026-04-02T00:16:48.148079661Z"
     description: Custom 12ft.io replacement
     digest: 2deff14873cd97425d2a41c48534aa72c3f2bb7840cadf0403e860846cc92409
@@ -962,4 +978,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-02T01:18:29.284523651Z"
+generated: "2026-04-02T01:19:24.397124072Z"
