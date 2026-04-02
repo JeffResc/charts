@@ -63,7 +63,7 @@ jobs:
               --merge /tmp/gh-pages/index.yaml
             cp "$tmpdir/index.yaml" /tmp/gh-pages/index.yaml
 
-            helm push "$pkg" oci://ghcr.io/${{ github.repository_owner }}/charts
+            helm push "$pkg" oci://ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/charts
           done
 
           git -C /tmp/gh-pages add index.yaml
