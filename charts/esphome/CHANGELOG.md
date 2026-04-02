@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/esphome-v0.2.0...esphome-v0.2.1) (2026-04-02)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.3.2 ([#98](https://github.com/JeffResc/charts/issues/98)) ([89f86fb](https://github.com/JeffResc/charts/commit/89f86fb6b4dc6347024ec7fdf9b36b4ba486b8d3))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/esphome-0.1.11...esphome-v0.2.0) (2026-04-01)
 
 
