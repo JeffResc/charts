@@ -19,6 +19,10 @@
       "component": "esphome",
       "paths": ["charts/esphome"]
     },
+    "charts/govee2mqtt": {
+      "component": "govee2mqtt",
+      "paths": ["charts/govee2mqtt"]
+    },
     "charts/it-tools": {
       "component": "it-tools",
       "paths": ["charts/it-tools"]
