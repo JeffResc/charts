@@ -75,6 +75,7 @@ jobs:
           git stash --include-untracked
           git switch gh-pages
 
+          # Copy packaged charts
           cp /tmp/chart-packages/*.tgz .
 
           # Merge into existing index (--merge preserves old entries)
