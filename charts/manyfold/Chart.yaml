@@ -30,9 +30,9 @@ version: 1.0.1
 appVersion: "0.136.0" # renovate: image=ghcr.io/manyfold3d/manyfold
 
 dependencies:
-  - name: redis
-    version: 25.3.9
-    condition: redis.enabled
+  - name: valkey
+    version: 5.4.9
+    condition: valkey.enabled
     repository: https://charts.bitnami.com/bitnami
   - name: postgresql
     condition: postgresql.enabled
