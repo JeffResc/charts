@@ -326,6 +326,23 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
     version: 0.0.2
+  govee2mqtt:
+  - apiVersion: v2
+    appVersion: 2026.03.25-ab9deb66
+    created: "2026-04-02T03:10:02.435244608Z"
+    description: Bridge between Govee smart devices and MQTT/Home Assistant
+    digest: c974afdc1eac1bfbf083c22eed57b1a3fd00ae6338f394eb9a784a16e99d1b2e
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: govee2mqtt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/wez/govee2mqtt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/govee2mqtt-0.1.1/govee2mqtt-0.1.1.tgz
+    version: 0.1.1
   it-tools:
   - apiVersion: v2
     appVersion: 2024.10.22-7ca5933
@@ -1058,4 +1075,4 @@ entries:
     urls:
     - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-02T02:23:14.703249132Z"
+generated: "2026-04-02T03:10:02.434673071Z"
