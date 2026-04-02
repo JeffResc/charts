@@ -1,904 +1,946 @@
 apiVersion: v1
 entries:
   13ft:
-    - apiVersion: v2
-      appVersion: 0.3.4
-      created: "2026-04-02T00:16:48.148079661Z"
-      description: Custom 12ft.io replacement
-      digest: 2deff14873cd97425d2a41c48534aa72c3f2bb7840cadf0403e860846cc92409
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: 13ft
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://charts.jeffresc.dev/13ft-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 0.3.4
-      created: "2025-06-28T08:13:48.423655784Z"
-      description: Custom 12ft.io replacement
-      digest: 4142e6bf3e9463b6dc940332a1b48d8e9a81872713f2706db803ef30216b31f3
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: 13ft
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/13ft-0.1.1/13ft-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 0.3.4
-      created: "2025-06-12T02:17:02.506609168Z"
-      description: Custom 12ft.io replacement
-      digest: bcf9a7e0dd5102df7f04000ce40bf19107a6679e09e5f622fcf094b823355ab9
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: 13ft
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/13ft-0.1.0/13ft-0.1.0.tgz
-      version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.3.4
+    created: "2026-04-02T00:16:48.148079661Z"
+    description: Custom 12ft.io replacement
+    digest: 2deff14873cd97425d2a41c48534aa72c3f2bb7840cadf0403e860846cc92409
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: 13ft
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/13ft-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.3.4
+    created: "2025-06-28T08:13:48.423655784Z"
+    description: Custom 12ft.io replacement
+    digest: 4142e6bf3e9463b6dc940332a1b48d8e9a81872713f2706db803ef30216b31f3
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: 13ft
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/13ft-0.1.1/13ft-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.3.4
+    created: "2025-06-12T02:17:02.506609168Z"
+    description: Custom 12ft.io replacement
+    digest: bcf9a7e0dd5102df7f04000ce40bf19107a6679e09e5f622fcf094b823355ab9
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: 13ft
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/13ft-0.1.0/13ft-0.1.0.tgz
+    version: 0.1.0
   esphome:
-    - apiVersion: v2
-      appVersion: 2025.6.3
-      created: "2025-07-06T00:16:17.371163123Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: b568ec776de8ee9f5cf61a5c35759600787aa6731eb687e272349b6a3105d9e9
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.10/esphome-0.1.10.tgz
-      version: 0.1.10
-    - apiVersion: v2
-      appVersion: 2025.6.2
-      created: "2025-06-30T03:34:58.470517237Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 196a824aebcc5dae40aff63089ced3934cd9db7a7aeae838c5804a0d4c190595
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.9/esphome-0.1.9.tgz
-      version: 0.1.9
-    - apiVersion: v2
-      appVersion: 2025.6.2
-      created: "2025-06-28T08:13:48.584624916Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 5161469e2a3bc9fd010e6d04af841638c299d7f62893010b5e9bc7b2bf50b31b
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.8/esphome-0.1.8.tgz
-      version: 0.1.8
-    - apiVersion: v2
-      appVersion: 2025.6.2
-      created: "2025-06-28T07:52:50.8216891Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 906fa9e2a98020f82aa57093a88693ceea096f436b0cd7149b809ac34549c8f3
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.7/esphome-0.1.7.tgz
-      version: 0.1.7
-    - apiVersion: v2
-      appVersion: 2025.5.2
-      created: "2025-06-12T01:50:18.353032727Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: dadbc48abe93368659a66c1cfb73bc0d09686f01da4c30107e4431247bcf76d6
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.6/esphome-0.1.6.tgz
-      version: 0.1.6
-    - apiVersion: v2
-      appVersion: 2025.5.0
-      created: "2025-05-21T18:11:47.051090166Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: c441a61c0eaac0d96b2f97e5fb528e9e000653c50be14f73209d94a52a039344
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.5/esphome-0.1.5.tgz
-      version: 0.1.5
-    - apiVersion: v2
-      appVersion: 2025.4.1
-      created: "2025-05-10T03:05:20.053447632Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 313b1e4493fd3326c81960678aca5cab17c65e66431a23a28270d9b3519f435d
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.4/esphome-0.1.4.tgz
-      version: 0.1.4
-    - apiVersion: v2
-      appVersion: 2025.4.0
-      created: "2025-04-28T22:32:41.493141398Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: e097d41015c466f0f2b3bae43d61621403218d5fe66db9208cca9f80bd34d838
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.3/esphome-0.1.3.tgz
-      version: 0.1.3
-    - apiVersion: v2
-      appVersion: 2025.3.3
-      created: "2025-04-09T04:29:17.512252307Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 3f9d627c769d63653c5b36639419ec1927d062da85c0386eaeac3aafb53ae4a2
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.2/esphome-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 2025.2.2
-      created: "2025-03-03T19:38:50.517387707Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 9020bce649aab8c45df5a6a1cbe04212ffd82f48bcb168ef37c50092795947bc
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.1/esphome-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 2024.12.4
-      created: "2025-02-14T15:44:25.04765103Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: bf369dd2f9a43dbb3ae46c1eaf51aafb97f4ef0913ed17d114677d6516075004
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.1.0/esphome-0.1.0.tgz
-      version: 0.1.0
-    - apiVersion: v2
-      appVersion: 2024.9.1
-      created: "2024-09-28T21:49:54.388482265Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 44563555ac67db12dd7a06be2e8ab7cd9a0ba891a9bce72b207b9ba5712fe7ce
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.0.3/esphome-0.0.3.tgz
-      version: 0.0.3
-    - apiVersion: v2
-      appVersion: 2024.2.2
-      created: "2024-03-19T03:43:25.938723485Z"
-      description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
-      digest: 2fd4bbee5bf0ba7f36342965e272f4a63ee761aae75665394357d585c9539d05
-      icon: https://avatars.githubusercontent.com/u/45919759
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: esphome
-      sources:
-        - https://github.com/esphome/esphome
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
-      version: 0.0.2
+  - apiVersion: v2
+    appVersion: 2025.6.3
+    created: "2025-07-06T00:16:17.371163123Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: b568ec776de8ee9f5cf61a5c35759600787aa6731eb687e272349b6a3105d9e9
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.10/esphome-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 2025.6.2
+    created: "2025-06-30T03:34:58.470517237Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 196a824aebcc5dae40aff63089ced3934cd9db7a7aeae838c5804a0d4c190595
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.9/esphome-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 2025.6.2
+    created: "2025-06-28T08:13:48.584624916Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 5161469e2a3bc9fd010e6d04af841638c299d7f62893010b5e9bc7b2bf50b31b
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.8/esphome-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 2025.6.2
+    created: "2025-06-28T07:52:50.8216891Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 906fa9e2a98020f82aa57093a88693ceea096f436b0cd7149b809ac34549c8f3
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.7/esphome-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 2025.5.2
+    created: "2025-06-12T01:50:18.353032727Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: dadbc48abe93368659a66c1cfb73bc0d09686f01da4c30107e4431247bcf76d6
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.6/esphome-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 2025.5.0
+    created: "2025-05-21T18:11:47.051090166Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: c441a61c0eaac0d96b2f97e5fb528e9e000653c50be14f73209d94a52a039344
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.5/esphome-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 2025.4.1
+    created: "2025-05-10T03:05:20.053447632Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 313b1e4493fd3326c81960678aca5cab17c65e66431a23a28270d9b3519f435d
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.4/esphome-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 2025.4.0
+    created: "2025-04-28T22:32:41.493141398Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: e097d41015c466f0f2b3bae43d61621403218d5fe66db9208cca9f80bd34d838
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.3/esphome-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 2025.3.3
+    created: "2025-04-09T04:29:17.512252307Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 3f9d627c769d63653c5b36639419ec1927d062da85c0386eaeac3aafb53ae4a2
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.2/esphome-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 2025.2.2
+    created: "2025-03-03T19:38:50.517387707Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 9020bce649aab8c45df5a6a1cbe04212ffd82f48bcb168ef37c50092795947bc
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.1/esphome-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 2024.12.4
+    created: "2025-02-14T15:44:25.04765103Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: bf369dd2f9a43dbb3ae46c1eaf51aafb97f4ef0913ed17d114677d6516075004
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.1.0/esphome-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 2024.9.1
+    created: "2024-09-28T21:49:54.388482265Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 44563555ac67db12dd7a06be2e8ab7cd9a0ba891a9bce72b207b9ba5712fe7ce
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.0.3/esphome-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 2024.2.2
+    created: "2024-03-19T03:43:25.938723485Z"
+    description: ESPHome is a system to control your microcontrollers by simple yet
+      powerful configuration files and control them remotely through Home Automation
+      systems.
+    digest: 2fd4bbee5bf0ba7f36342965e272f4a63ee761aae75665394357d585c9539d05
+    icon: https://avatars.githubusercontent.com/u/45919759
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: esphome
+    sources:
+    - https://github.com/esphome/esphome
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/esphome-0.0.2/esphome-0.0.2.tgz
+    version: 0.0.2
   it-tools:
-    - apiVersion: v2
-      appVersion: 2026.1.4
-      created: "2026-04-02T00:16:48.14922698Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 4196ce038a073189f8bd377746da38f4b38c542582cdd708f2c829222325fde8
-      icon: https://github.com/sharevb/it-tools/blob/ecdf2c1803ef4c9058db4a66b559e913f09f5a77/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/sharevb/it-tools
-      type: application
-      urls:
-        - https://charts.jeffresc.dev/it-tools-0.1.5.tgz
-      version: 0.1.5
-    - apiVersion: v2
-      appVersion: 2024.10.22-7ca5933
-      created: "2025-06-30T03:34:58.587914511Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: edb2ce0bcfcb88f8eaf09ab0c6359f1d0690034166c8efbf37c4c7cb8c991acf
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.4/it-tools-0.1.4.tgz
-      version: 0.1.4
-    - apiVersion: v2
-      appVersion: 2024.10.22-7ca5933
-      created: "2025-06-28T08:13:48.740728895Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 3ce562ac59d8479ce1ee3dd68801bb6cc357c59edf7b1119b532571802f013e3
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.3/it-tools-0.1.3.tgz
-      version: 0.1.3
-    - apiVersion: v2
-      appVersion: 2024.10.22-7ca5933
-      created: "2025-04-28T22:33:02.750969276Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: ca0ca6c69c0b9acba5c5263cc49e306d305ca46cfbc3dac1d1d1e9ee44660abb
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.2/it-tools-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 2024.10.22-7ca5933
-      created: "2025-02-21T19:03:47.663286054Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 3bff6305a05612f0d0e7f96eebac1d8b31495f49e95dc22c876cf828c3ab6b15
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.1/it-tools-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 2024.10.22-7ca5933
-      created: "2025-02-14T15:44:25.163760905Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 4b6289bf968b705617ddc1b1b11bba003f6ede81ceda185bd63a0242bf027064
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
-      version: 0.1.0
-    - apiVersion: v2
-      appVersion: 2024.5.13-a0bc346
-      created: "2024-09-28T21:49:54.549210598Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 263b3b6fa7a33c84001361f69015950b859e088da49c1e965b22c42020e290c3
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.3/it-tools-0.0.3.tgz
-      version: 0.0.3
-    - apiVersion: v2
-      appVersion: 2024.5.13-a0bc346
-      created: "2024-09-20T14:48:26.58294546Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: bb1c283c1350fa108452314cf6ffae422021f85ea61a0baa2bd7504d769d3cb1
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.2/it-tools-0.0.2.tgz
-      version: 0.0.2
-    - apiVersion: v2
-      appVersion: 2023.12.21-5ed3693
-      created: "2024-03-19T03:40:30.178781898Z"
-      description: Collection of handy online tools for developers, with great UX
-      digest: 11ac7676631ad84c2b73ae95309e7ee68b40f82aff30bd4183098db5d5efa156
-      icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: it-tools
-      sources:
-        - https://github.com/CorentinTh/it-tools
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
-      version: 0.0.1
+  - apiVersion: v2
+    appVersion: 2026.1.4
+    created: "2026-04-02T00:16:48.14922698Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 4196ce038a073189f8bd377746da38f4b38c542582cdd708f2c829222325fde8
+    icon: https://github.com/sharevb/it-tools/blob/ecdf2c1803ef4c9058db4a66b559e913f09f5a77/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/sharevb/it-tools
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/it-tools-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-06-30T03:34:58.587914511Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: edb2ce0bcfcb88f8eaf09ab0c6359f1d0690034166c8efbf37c4c7cb8c991acf
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.4/it-tools-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-06-28T08:13:48.740728895Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 3ce562ac59d8479ce1ee3dd68801bb6cc357c59edf7b1119b532571802f013e3
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.3/it-tools-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-04-28T22:33:02.750969276Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: ca0ca6c69c0b9acba5c5263cc49e306d305ca46cfbc3dac1d1d1e9ee44660abb
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.2/it-tools-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-02-21T19:03:47.663286054Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 3bff6305a05612f0d0e7f96eebac1d8b31495f49e95dc22c876cf828c3ab6b15
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.1/it-tools-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 2024.10.22-7ca5933
+    created: "2025-02-14T15:44:25.163760905Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 4b6289bf968b705617ddc1b1b11bba003f6ede81ceda185bd63a0242bf027064
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.1.0/it-tools-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-09-28T21:49:54.549210598Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 263b3b6fa7a33c84001361f69015950b859e088da49c1e965b22c42020e290c3
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.3/it-tools-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 2024.5.13-a0bc346
+    created: "2024-09-20T14:48:26.58294546Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: bb1c283c1350fa108452314cf6ffae422021f85ea61a0baa2bd7504d769d3cb1
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.2/it-tools-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 2023.12.21-5ed3693
+    created: "2024-03-19T03:40:30.178781898Z"
+    description: Collection of handy online tools for developers, with great UX
+    digest: 11ac7676631ad84c2b73ae95309e7ee68b40f82aff30bd4183098db5d5efa156
+    icon: https://raw.githubusercontent.com/CorentinTh/it-tools/b7193e838ba83d0548211cff922e107a1f11f90f/public/mstile-310x310.png
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: it-tools
+    sources:
+    - https://github.com/CorentinTh/it-tools
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/it-tools-0.0.1/it-tools-0.0.1.tgz
+    version: 0.0.1
   manyfold:
-    - apiVersion: v2
-      appVersion: 0.136.0
-      created: "2026-04-02T00:16:48.160925823Z"
-      dependencies:
-        - condition: valkey.enabled
-          name: valkey
-          repository: https://charts.bitnami.com/bitnami
-          version: 5.4.9
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 18.5.15
-      description: Organize and share your 3d print files
-      digest: a926994f3eb46ec91fad342c5e5a92a0f178636c18dddff6b655079d12dd7e10
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://charts.jeffresc.dev/manyfold-0.2.0.tgz
-      version: 0.2.0
-    - apiVersion: v2
-      appVersion: 0.120.1
-      created: "2025-08-07T13:07:13.857927371Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.14
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: 2cd0929826882fc17c6aae6161d62acb2cf50d44fc4b6c64b490d9b2bc1ea22f
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.8/manyfold-0.1.8.tgz
-      version: 0.1.8
-    - apiVersion: v2
-      appVersion: 0.120.1
-      created: "2025-08-07T13:04:23.326752945Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.6
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: 8c29abb712f29a4f820d32a01b3ae914665c6fce98211672677fef41564608df
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.7/manyfold-0.1.7.tgz
-      version: 0.1.7
-    - apiVersion: v2
-      appVersion: 0.116.2
-      created: "2025-06-30T03:34:58.745145585Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.6
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: 05c7a6981535061c378846b95ea6128b16fb5758486225e3b8781dfbf1e0c27a
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.6/manyfold-0.1.6.tgz
-      version: 0.1.6
-    - apiVersion: v2
-      appVersion: 0.116.2
-      created: "2025-06-30T03:16:07.762832828Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.6
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: 98acf9e778abcc0f5dbb2b7d626c33ef3da05e394a6e8f04fd1ed625c6f13ad1
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.5/manyfold-0.1.5.tgz
-      version: 0.1.5
-    - apiVersion: v2
-      appVersion: 0.116.1
-      created: "2025-06-28T08:13:48.912842567Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.6
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: ddb6f1b2bcf90752eb77a7b520ad375f3e38865b9705798a029a3f0e12ebe293
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.4/manyfold-0.1.4.tgz
-      version: 0.1.4
-    - apiVersion: v2
-      appVersion: 0.116.1
-      created: "2025-06-28T07:56:39.731498234Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.6
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.14
-      description: Organize and share your 3d print files
-      digest: 21e3c919246c8ab4a083722a200a3355c75eb86b4531b1e63a8bffc3f1c4a6ce
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.3/manyfold-0.1.3.tgz
-      version: 0.1.3
-    - apiVersion: v2
-      appVersion: 0.116.1
-      created: "2025-06-28T07:53:46.771355443Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.5
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.13
-      description: Organize and share your 3d print files
-      digest: de3556c73bcf508824d1a78a2d4bead97af82df1e5d763b7ebdd98d92fba096d
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.2/manyfold-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 0.114.1
-      created: "2025-06-22T22:37:27.76021247Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.5
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.13
-      description: Organize and share your 3d print files
-      digest: 2e40888bf77d8a5c58aa1ad474d72e223070b993abcefbbdf590ff86a1421a36
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.1/manyfold-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 0.114.1
-      created: "2025-06-22T22:07:04.541153017Z"
-      dependencies:
-        - condition: redis.enabled
-          name: redis
-          repository: https://charts.bitnami.com/bitnami
-          version: 21.2.5
-        - condition: postgresql.enabled
-          name: postgresql
-          repository: https://charts.bitnami.com/bitnami
-          version: 16.7.13
-      description: Organize and share your 3d print files
-      digest: fa0a56ad5f4dfedb14efa208bbf83520b6e4fbd610afb6f08efbcf431056ddbc
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: manyfold
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/manyfold3d/manyfold
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.0/manyfold-0.1.0.tgz
-      version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.136.0
+    created: "2026-04-02T00:16:48.160925823Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.4.9
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.5.15
+    description: Organize and share your 3d print files
+    digest: a926994f3eb46ec91fad342c5e5a92a0f178636c18dddff6b655079d12dd7e10
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/manyfold-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.120.1
+    created: "2025-08-07T13:07:13.857927371Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.14
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 2cd0929826882fc17c6aae6161d62acb2cf50d44fc4b6c64b490d9b2bc1ea22f
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.8/manyfold-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 0.120.1
+    created: "2025-08-07T13:04:23.326752945Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 8c29abb712f29a4f820d32a01b3ae914665c6fce98211672677fef41564608df
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.7/manyfold-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 0.116.2
+    created: "2025-06-30T03:34:58.745145585Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 05c7a6981535061c378846b95ea6128b16fb5758486225e3b8781dfbf1e0c27a
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.6/manyfold-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 0.116.2
+    created: "2025-06-30T03:16:07.762832828Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 98acf9e778abcc0f5dbb2b7d626c33ef3da05e394a6e8f04fd1ed625c6f13ad1
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.5/manyfold-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.116.1
+    created: "2025-06-28T08:13:48.912842567Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: ddb6f1b2bcf90752eb77a7b520ad375f3e38865b9705798a029a3f0e12ebe293
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.4/manyfold-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.116.1
+    created: "2025-06-28T07:56:39.731498234Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.14
+    description: Organize and share your 3d print files
+    digest: 21e3c919246c8ab4a083722a200a3355c75eb86b4531b1e63a8bffc3f1c4a6ce
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.3/manyfold-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 0.116.1
+    created: "2025-06-28T07:53:46.771355443Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.13
+    description: Organize and share your 3d print files
+    digest: de3556c73bcf508824d1a78a2d4bead97af82df1e5d763b7ebdd98d92fba096d
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.2/manyfold-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.114.1
+    created: "2025-06-22T22:37:27.76021247Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.13
+    description: Organize and share your 3d print files
+    digest: 2e40888bf77d8a5c58aa1ad474d72e223070b993abcefbbdf590ff86a1421a36
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.1/manyfold-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.114.1
+    created: "2025-06-22T22:07:04.541153017Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.2.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.13
+    description: Organize and share your 3d print files
+    digest: fa0a56ad5f4dfedb14efa208bbf83520b6e4fbd610afb6f08efbcf431056ddbc
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: manyfold
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/manyfold3d/manyfold
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/manyfold-0.1.0/manyfold-0.1.0.tgz
+    version: 0.1.0
   newt:
-    - apiVersion: v2
-      appVersion: 1.4.0
-      created: "2025-08-07T13:04:05.560498072Z"
-      description: Tunneling client for Pangolin - secure WireGuard proxy
-      digest: 905b2491602b262ba4819044affd8c833749d8485487a1b948faa57430a8e085
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: newt
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/fosrl/newt
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/newt-0.1.3/newt-0.1.3.tgz
-      version: 0.1.3
-    - apiVersion: v2
-      appVersion: 1.2.1
-      created: "2025-07-06T00:12:32.205045242Z"
-      description: Tunneling client for Pangolin - secure WireGuard proxy
-      digest: 9d5a4198b3067f28e5fd0432ffa74d5935c0052ab61ee3f9c47681191850a423
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: newt
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/fosrl/newt
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/newt-0.1.2/newt-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 1.2.1
-      created: "2025-06-30T03:34:58.868826488Z"
-      description: Tunneling client for Pangolin - secure WireGuard proxy
-      digest: 2570189742f72910826966170be5ef50023885426f72b80402054f53b50e7994
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: newt
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/fosrl/newt
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/newt-0.1.1/newt-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 1.2.1
-      created: "2025-06-30T03:16:07.873267531Z"
-      description: Tunneling client for Pangolin - secure WireGuard proxy
-      digest: 797335e8b3ea6c4e460ed801f7f1accb027f56b7df52cf8447b575253c861fe7
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: newt
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/fosrl/newt
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/newt-0.1.0/newt-0.1.0.tgz
-      version: 0.1.0
+  - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2026-04-02T01:15:24.372566413Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 104c9bc4bab4f58fa6a4baa81110594110c5a9bad62b29b15b8433bccee55b4b
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.2.0/newt-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2025-08-07T13:04:05.560498072Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 905b2491602b262ba4819044affd8c833749d8485487a1b948faa57430a8e085
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.3/newt-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.2.1
+    created: "2025-07-06T00:12:32.205045242Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 9d5a4198b3067f28e5fd0432ffa74d5935c0052ab61ee3f9c47681191850a423
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.2/newt-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.2.1
+    created: "2025-06-30T03:34:58.868826488Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 2570189742f72910826966170be5ef50023885426f72b80402054f53b50e7994
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.1/newt-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.2.1
+    created: "2025-06-30T03:16:07.873267531Z"
+    description: Tunneling client for Pangolin - secure WireGuard proxy
+    digest: 797335e8b3ea6c4e460ed801f7f1accb027f56b7df52cf8447b575253c861fe7
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: newt
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/fosrl/newt
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/newt-0.1.0/newt-0.1.0.tgz
+    version: 0.1.0
   traccar:
-    - apiVersion: v2
-      appVersion: 6.12-alpine
-      created: "2026-04-02T00:16:48.165328921Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: 7270846f3e28ac2bcb9c38ff88fbd48df05bab7206bb40a4b568286187ed1817
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://charts.jeffresc.dev/traccar-0.1.9.tgz
-      version: 0.1.9
-    - apiVersion: v2
-      appVersion: 6.7-alpine
-      created: "2025-06-30T03:34:59.006860677Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: 35abac3e21b4c0b6a5bce50db9ef3fe98a11fb3f6746e554399ada9029174505
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.7/traccar-0.1.7.tgz
-      version: 0.1.7
-    - apiVersion: v2
-      appVersion: 6.7-alpine
-      created: "2025-06-28T08:13:49.088153977Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: dc3d74991e2e0b519bd4eccf8efb169cb77bfa727a4a5423d090a1e46fb7b1b4
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.6/traccar-0.1.6.tgz
-      version: 0.1.6
-    - apiVersion: v2
-      appVersion: 6.7-alpine
-      created: "2025-06-18T00:45:14.768246838Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: c3a2825517a9d5073c4109f9706bcce10b7b17efdd2fac89bb22d10a259b7320
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.5/traccar-0.1.5.tgz
-      version: 0.1.5
-    - apiVersion: v2
-      appVersion: 6.6-alpine
-      created: "2025-05-10T23:36:01.50378203Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: 678be208f5ff44e00a46e158e71de97f7d74eeddbb05cb92c7311266e07cd21d
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.3/traccar-0.1.3.tgz
-      version: 0.1.3
-    - apiVersion: v2
-      appVersion: 6.6-alpine
-      created: "2025-05-10T23:02:35.804098846Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: 5fb0e2c74358fa4cd6e71628cd15ece5a595395ec7792cf521901cfc804a9a37
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.2/traccar-0.1.2.tgz
-      version: 0.1.2
-    - apiVersion: v2
-      appVersion: 6.6-alpine
-      created: "2025-05-10T18:05:32.844193094Z"
-      dependencies:
-        - condition: mysql.enabled
-          name: mysql
-          repository: https://charts.bitnami.com/bitnami
-          version: 12.3.5
-      description: Modern GPS Tracking Platform
-      digest: 9edee5afdd916b4e131bd511b926065485d898417493c40416fe0015cc3586ae
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.1/traccar-0.1.1.tgz
-      version: 0.1.1
-    - apiVersion: v2
-      appVersion: 6.6-alpine
-      created: "2025-05-10T03:05:20.270753925Z"
-      description: Modern GPS Tracking Platform
-      digest: 90c874b01f73e5a59d1d470e16639406978146aac5426e9590b9f06a3ceee482
-      icon: https://avatars.githubusercontent.com/u/37892282
-      maintainers:
-        - email: jeff@jeffresc.dev
-          name: Jeff Rescignano
-      name: traccar
-      sources:
-        - https://github.com/jeffresc/charts
-        - https://github.com/traccar/traccar
-      type: application
-      urls:
-        - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
-      version: 0.1.0
-generated: "2026-04-02T00:16:48.147495246Z"
+  - apiVersion: v2
+    appVersion: 6.12-alpine
+    created: "2026-04-02T00:16:48.165328921Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 7270846f3e28ac2bcb9c38ff88fbd48df05bab7206bb40a4b568286187ed1817
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://charts.jeffresc.dev/traccar-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 6.7-alpine
+    created: "2025-06-30T03:34:59.006860677Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 35abac3e21b4c0b6a5bce50db9ef3fe98a11fb3f6746e554399ada9029174505
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.7/traccar-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 6.7-alpine
+    created: "2025-06-28T08:13:49.088153977Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: dc3d74991e2e0b519bd4eccf8efb169cb77bfa727a4a5423d090a1e46fb7b1b4
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.6/traccar-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 6.7-alpine
+    created: "2025-06-18T00:45:14.768246838Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: c3a2825517a9d5073c4109f9706bcce10b7b17efdd2fac89bb22d10a259b7320
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.5/traccar-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 6.6-alpine
+    created: "2025-05-10T23:36:01.50378203Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 678be208f5ff44e00a46e158e71de97f7d74eeddbb05cb92c7311266e07cd21d
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.3/traccar-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 6.6-alpine
+    created: "2025-05-10T23:02:35.804098846Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 5fb0e2c74358fa4cd6e71628cd15ece5a595395ec7792cf521901cfc804a9a37
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.2/traccar-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 6.6-alpine
+    created: "2025-05-10T18:05:32.844193094Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.5
+    description: Modern GPS Tracking Platform
+    digest: 9edee5afdd916b4e131bd511b926065485d898417493c40416fe0015cc3586ae
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.1/traccar-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 6.6-alpine
+    created: "2025-05-10T03:05:20.270753925Z"
+    description: Modern GPS Tracking Platform
+    digest: 90c874b01f73e5a59d1d470e16639406978146aac5426e9590b9f06a3ceee482
+    icon: https://avatars.githubusercontent.com/u/37892282
+    maintainers:
+    - email: jeff@jeffresc.dev
+      name: Jeff Rescignano
+    name: traccar
+    sources:
+    - https://github.com/jeffresc/charts
+    - https://github.com/traccar/traccar
+    type: application
+    urls:
+    - https://github.com/JeffResc/charts/releases/download/traccar-0.1.0/traccar-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-04-02T01:15:24.372177542Z"
