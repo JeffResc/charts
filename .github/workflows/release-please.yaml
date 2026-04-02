@@ -50,7 +50,6 @@ jobs:
 
       - name: Add dependency repos
         run: |
-          # Dynamically discover and add all unique Helm dependency repos from Chart.yaml files
           grep -rh '^\s*repository:' charts/*/Chart.yaml 2>/dev/null \
             | sed 's/.*repository:[[:space:]]*//' | tr -d '"' | tr -d "'" \
             | grep '^https://' | sort -u \
