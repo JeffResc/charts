@@ -71,3 +71,33 @@ jobs:
             git -C /tmp/gh-pages commit -m "chore: update Helm index"
             git -C /tmp/gh-pages push origin HEAD:gh-pages
           fi
+
+      - uses: mikefarah/yq@v4
+
+      - name: Update charts table in README
+        run: |
+          rows=""
+          for chart_yaml in $(ls charts/*/Chart.yaml | sort); do
+            name=$(yq '.name' "$chart_yaml")
+            version=$(yq '.version' "$chart_yaml")
+            app_version=$(yq '.appVersion' "$chart_yaml")
+            description=$(yq '.description' "$chart_yaml")
+            rows="${rows}<tr>\n<td markdown=\"span\">${name}</td>\n<td markdown=\"span\">${version}</td>\n<td markdown=\"span\">${app_version}</td>\n<td markdown=\"span\">${description}</td>\n</tr>\n"
+          done
+
+          table="<table>\n<thead>\n<tr class=\"header\">\n<th><strong>Chart</strong></th>\n<th><strong>Chart Version</strong></th>\n<th><strong>App Version</strong></th>\n<th><strong>Description</strong></th>\n</tr>\n</thead>\n<tbody>\n${rows}</tbody>\n</table>"
+
+          perl -i -0pe "s|<!-- CHARTS_TABLE_START -->.*?<!-- CHARTS_TABLE_END -->|<!-- CHARTS_TABLE_START -->\n${table}\n<!-- CHARTS_TABLE_END -->|s" README.md
+
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update charts table in README"
+            git push origin HEAD:main
+          fi
+
+          cp README.md /tmp/gh-pages/README.md
+          git -C /tmp/gh-pages add README.md
+          if ! git -C /tmp/gh-pages diff --cached --quiet; then
+            git -C /tmp/gh-pages commit -m "chore: update charts table in README"
+            git -C /tmp/gh-pages push origin HEAD:gh-pages
+          fi
