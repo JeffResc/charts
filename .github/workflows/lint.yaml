@@ -10,30 +10,9 @@ jobs:
     name: Helm Lint & Schema Validation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Install Helm
-        uses: azure/setup-helm@v5
-
-      - name: Add dependency repos
-        run: |
-          grep -rh '^\s*repository:' charts/*/Chart.yaml 2>/dev/null \
-            | sed 's/.*repository:[[:space:]]*//' | tr -d '"' | tr -d "'" \
-            | grep '^https://' | sort -u \
-            | while read -r url; do
-                name=$(echo "$url" | md5sum | cut -c1-8)
-                helm repo add "$name" "$url"
-              done
-
-      - name: Build chart dependencies
-        run: |
-          for chart in charts/*; do
-            if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
-              helm dependency update "$chart"
-            fi
-          done
-
+      - uses: actions/checkout@v6
+      - uses: azure/setup-helm@v5
+      - uses: ./.github/actions/helm-deps
       - name: Lint Helm Charts
         run: |
           for chart in charts/*; do
@@ -47,37 +26,15 @@ jobs:
     name: Validate Helm Manifests Against Kubernetes API
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Install Helm
-        uses: azure/setup-helm@v5
-
+      - uses: actions/checkout@v6
+      - uses: azure/setup-helm@v5
       - name: Install kubeconform
         run: |
           curl -LO https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz
           tar -xzf kubeconform-linux-amd64.tar.gz
           chmod +x kubeconform
           sudo mv kubeconform /usr/local/bin/
-
-      - name: Add dependency repos
-        run: |
-          grep -rh '^\s*repository:' charts/*/Chart.yaml 2>/dev/null \
-            | sed 's/.*repository:[[:space:]]*//' | tr -d '"' | tr -d "'" \
-            | grep '^https://' | sort -u \
-            | while read -r url; do
-                name=$(echo "$url" | md5sum | cut -c1-8)
-                helm repo add "$name" "$url"
-              done
-
-      - name: Build chart dependencies
-        run: |
-          for chart in charts/*; do
-            if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
-              helm dependency update "$chart"
-            fi
-          done
-
+      - uses: ./.github/actions/helm-deps
       - name: Validate Helm templates
         run: |
           for chart in charts/*; do

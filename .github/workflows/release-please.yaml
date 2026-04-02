@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -23,14 +24,12 @@ jobs:
   publish:
     needs: release-please
     if: needs.release-please.outputs.releases_created == 'true'
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write
       packages: write
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -39,65 +38,36 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Install Helm
-        uses: azure/setup-helm@v5
+      - uses: azure/setup-helm@v5
 
-      - name: Regenerate chart READMEs
-        run: |
-          HELM_DOCS_VERSION="1.14.2"
-          curl -sSL "https://github.com/norwoodj/helm-docs/releases/download/v${HELM_DOCS_VERSION}/helm-docs_${HELM_DOCS_VERSION}_Linux_x86_64.tar.gz" | tar xz -C /usr/local/bin helm-docs
-          helm-docs --chart-search-root charts/
+      - uses: ./.github/actions/helm-deps
 
-      - name: Add dependency repos
-        run: |
-          grep -rh '^\s*repository:' charts/*/Chart.yaml 2>/dev/null \
-            | sed 's/.*repository:[[:space:]]*//' | tr -d '"' | tr -d "'" \
-            | grep '^https://' | sort -u \
-            | while read -r url; do
-                name=$(echo "$url" | md5sum | cut -c1-8)
-                echo "Adding repo $name -> $url"
-                helm repo add "$name" "$url"
-              done
-
-      - name: Package charts
-        run: |
-          mkdir -p /tmp/chart-packages
-          for chart in charts/*/; do
-            if grep -q '^dependencies:' "$chart/Chart.yaml" 2>/dev/null; then
-              helm dependency update "$chart"
-            fi
-            helm package "$chart" -d /tmp/chart-packages
-          done
-
-      - name: Update gh-pages Helm repo index
-        run: |
-          git fetch origin gh-pages
-          git stash --include-untracked
-          git switch gh-pages
-
-          # Copy packaged charts
-          cp /tmp/chart-packages/*.tgz .
-
-          # Merge into existing index (--merge preserves old entries)
-          helm repo index . --url https://charts.jeffresc.dev --merge index.yaml
-
-          # Sync README from main
-          git checkout main -- README.md
-
-          git add index.yaml README.md *.tgz
-          if ! git diff --cached --quiet; then
-            git commit -m "Update Helm repo index and README"
-            git push origin gh-pages
-          fi
-          git switch -
-
-      - name: Login to GHCR
+      - name: Publish released charts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Push charts to GHCR
-        run: |
-          for pkg in /tmp/chart-packages/*.tgz; do
-            [ -f "$pkg" ] || continue
-            helm push "$pkg" oci://ghcr.io/jeffresc/charts
+          git fetch origin gh-pages
+          git worktree add /tmp/gh-pages origin/gh-pages
+
+          echo '${{ needs.release-please.outputs.paths_released }}' | jq -r '.[]' | while read -r chart_dir; do
+            tmpdir=$(mktemp -d)
+            pkg=$(helm package "$chart_dir" -d "$tmpdir" | awk '{print $NF}')
+            tag=$(basename "$pkg" .tgz)
+
+            gh release upload "$tag" "$pkg"
+
+            helm repo index "$tmpdir" \
+              --url "https://github.com/${{ github.repository }}/releases/download/$tag" \
+              --merge /tmp/gh-pages/index.yaml
+            cp "$tmpdir/index.yaml" /tmp/gh-pages/index.yaml
+
+            helm push "$pkg" oci://ghcr.io/${{ github.repository_owner }}/charts
           done
+
+          git -C /tmp/gh-pages add index.yaml
+          if ! git -C /tmp/gh-pages diff --cached --quiet; then
+            git -C /tmp/gh-pages commit -m "chore: update Helm index"
+            git -C /tmp/gh-pages push origin HEAD:gh-pages
+          fi
