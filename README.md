@@ -49,32 +49,38 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 </tr>
 <tr>
 <td markdown="span">esphome</td>
-<td markdown="span">0.2.0</td>
-<td markdown="span">2025.7.5</td>
+<td markdown="span">0.2.1</td>
+<td markdown="span">2026.3.2</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
+</tr>
+<tr>
+<td markdown="span">govee2mqtt</td>
+<td markdown="span">0.1.1</td>
+<td markdown="span">2026.03.25-ab9deb66</td>
+<td markdown="span">Bridge between Govee smart devices and MQTT/Home Assistant</td>
 </tr>
 <tr>
 <td markdown="span">it-tools</td>
 <td markdown="span">0.2.0</td>
-<td markdown="span">2024.10.22-7ca5933</td>
+<td markdown="span">2026.1.4</td>
 <td markdown="span">Collection of handy online tools for developers, with great UX</td>
 </tr>
 <tr>
 <td markdown="span">manyfold</td>
-<td markdown="span">1.0.0</td>
-<td markdown="span">0.120.1</td>
+<td markdown="span">1.0.1</td>
+<td markdown="span">0.136.0</td>
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
 <td markdown="span">newt</td>
-<td markdown="span">0.2.0</td>
+<td markdown="span">0.2.1</td>
 <td markdown="span">1.10.4</td>
 <td markdown="span">Tunneling client for Pangolin - secure WireGuard proxy</td>
 </tr>
 <tr>
 <td markdown="span">traccar</td>
-<td markdown="span">0.2.0</td>
-<td markdown="span">6.7-alpine</td>
+<td markdown="span">0.2.1</td>
+<td markdown="span">6.12-alpine</td>
 <td markdown="span">Modern GPS Tracking Platform</td>
 </tr>
 </tbody>
