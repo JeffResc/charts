@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/JeffResc/charts/compare/newt-0.2.1...newt-0.2.2) (2026-04-04)
+
+
+### Miscellaneous
+
+* **deps:** update fosrl/newt docker tag to v1.11.0 ([928a3a7](https://github.com/JeffResc/charts/commit/928a3a73106a183173acb29b24cb4dbf17ad2cf3))
+* **deps:** update fosrl/newt docker tag to v1.11.0 ([53ab7ff](https://github.com/JeffResc/charts/commit/53ab7ff91e5d1106313c19c429ebbd3631abb084))
+
 ## [0.2.1](https://github.com/JeffResc/charts/compare/newt-0.2.0...newt-0.2.1) (2026-04-02)
 
 
