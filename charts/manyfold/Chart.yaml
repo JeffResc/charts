@@ -37,4 +37,4 @@ dependencies:
   - name: postgresql
     condition: postgresql.enabled
     repository: https://charts.bitnami.com/bitnami
-    version: 18.5.15
+    version: 18.5.16
