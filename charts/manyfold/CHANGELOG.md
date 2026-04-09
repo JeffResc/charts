@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/JeffResc/charts/compare/manyfold-1.0.1...manyfold-1.0.2) (2026-04-09)
+
+
+### Miscellaneous
+
+* **deps:** update helm release postgresql to v18.5.16 ([#130](https://github.com/JeffResc/charts/issues/130)) ([72b17e9](https://github.com/JeffResc/charts/commit/72b17e95a6f24031240068112c74152f4e449c79))
+* **deps:** update helm release valkey to v5.4.10 ([#132](https://github.com/JeffResc/charts/issues/132)) ([f8e4223](https://github.com/JeffResc/charts/commit/f8e42230945cb99bf69400c962b4d161b0254e15))
+
 ## [1.0.1](https://github.com/JeffResc/charts/compare/manyfold-1.0.0...manyfold-1.0.1) (2026-04-02)
 
 
