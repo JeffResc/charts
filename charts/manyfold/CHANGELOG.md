@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/JeffResc/charts/compare/manyfold-1.0.2...manyfold-1.0.3) (2026-04-11)
+
+
+### Bug Fixes
+
+* update manyfold redis url to use valkey primary ([eed6223](https://github.com/JeffResc/charts/commit/eed622304bc9781b84c69b678bec0f8f2b4e0d57))
+* update manyfold redis url to use valkey primary ([23b3a89](https://github.com/JeffResc/charts/commit/23b3a8903ec9829e7d23e0b1274b4585ed30d975))
+
 ## [1.0.2](https://github.com/JeffResc/charts/compare/manyfold-1.0.1...manyfold-1.0.2) (2026-04-09)
 
 
