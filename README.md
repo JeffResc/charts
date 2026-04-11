@@ -67,7 +67,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 </tr>
 <tr>
 <td markdown="span">manyfold</td>
-<td markdown="span">1.0.2</td>
+<td markdown="span">1.0.3</td>
 <td markdown="span">0.136.0</td>
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
