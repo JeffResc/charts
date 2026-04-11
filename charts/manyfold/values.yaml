@@ -169,7 +169,7 @@ env:
   SECRET_KEY_BASE:
     value: "super_secret_key"
   REDIS_URL:
-    value: redis://{{ printf "%s-valkey-master" .Release.Name }}:6379/1
+    value: redis://{{ printf "%s-valkey-primary" .Release.Name }}:6379/1
   DATABASE_ADAPTER:
     value: "postgresql"
   DATABASE_HOST:
