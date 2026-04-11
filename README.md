@@ -50,7 +50,7 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 <tr>
 <td markdown="span">esphome</td>
 <td markdown="span">0.2.1</td>
-<td markdown="span">2026.3.2</td>
+<td markdown="span">2026.3.3</td>
 <td markdown="span">ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.</td>
 </tr>
 <tr>
@@ -67,14 +67,14 @@ helm install <chart-name> oci://ghcr.io/jeffresc/charts/<chart-name>
 </tr>
 <tr>
 <td markdown="span">manyfold</td>
-<td markdown="span">1.0.1</td>
+<td markdown="span">1.0.2</td>
 <td markdown="span">0.136.0</td>
 <td markdown="span">Organize and share your 3d print files</td>
 </tr>
 <tr>
 <td markdown="span">newt</td>
-<td markdown="span">0.2.1</td>
-<td markdown="span">1.10.4</td>
+<td markdown="span">0.2.2</td>
+<td markdown="span">1.11.0</td>
 <td markdown="span">Tunneling client for Pangolin - secure WireGuard proxy</td>
 </tr>
 <tr>
