@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.4](https://github.com/JeffResc/charts/compare/manyfold-1.0.3...manyfold-1.0.4) (2026-04-17)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/manyfold3d/manyfold docker tag to v0.137.0 ([#138](https://github.com/JeffResc/charts/issues/138)) ([d3cb6f0](https://github.com/JeffResc/charts/commit/d3cb6f0375caf4652718dc0e65797550d64e9ba0))
+* **deps:** update helm release postgresql to v18.5.17 ([#136](https://github.com/JeffResc/charts/issues/136)) ([85b1970](https://github.com/JeffResc/charts/commit/85b19709c0fedf34a85ba1c55c8147c5ab315e27))
+* **deps:** update helm release postgresql to v18.5.18 ([#139](https://github.com/JeffResc/charts/issues/139)) ([bace9af](https://github.com/JeffResc/charts/commit/bace9af98b9f0b635ef43cdd9f573a0ec6de5164))
+* **deps:** update helm release postgresql to v18.5.21 ([6b41018](https://github.com/JeffResc/charts/commit/6b4101839076c0742335f4b808335b04eac23183))
+* **deps:** update helm release postgresql to v18.5.21 ([450217b](https://github.com/JeffResc/charts/commit/450217b26dd623528caaa6024af6ed5651e7f3c9))
+* **deps:** update helm release postgresql to v18.5.22 ([#143](https://github.com/JeffResc/charts/issues/143)) ([a7353b5](https://github.com/JeffResc/charts/commit/a7353b506a3f309eb6e2a0ad74d0bf87bb76ec48))
+* **deps:** update helm release postgresql to v18.5.23 ([2aedff4](https://github.com/JeffResc/charts/commit/2aedff441ba89c93a204972b5c5111b1404716d6))
+* **deps:** update helm release postgresql to v18.5.23 ([298732b](https://github.com/JeffResc/charts/commit/298732bee5acd99d8c3c1b4ebf66727fb790c1d0))
+* **deps:** update helm release postgresql to v18.5.24 ([#145](https://github.com/JeffResc/charts/issues/145)) ([5878e7e](https://github.com/JeffResc/charts/commit/5878e7ebc5bfbaac92025ee81ea0eae39eee2103))
+* **deps:** update helm release valkey to v5.4.11 ([#135](https://github.com/JeffResc/charts/issues/135)) ([65651c9](https://github.com/JeffResc/charts/commit/65651c97ef3f4b71d509d7131424399396aaf8be))
+
 ## [1.0.3](https://github.com/JeffResc/charts/compare/manyfold-1.0.2...manyfold-1.0.3) (2026-04-11)
 
 
