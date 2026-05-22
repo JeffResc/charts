@@ -31,7 +31,7 @@ appVersion: "0.141.0" # renovate: image=ghcr.io/manyfold3d/manyfold
 
 dependencies:
   - name: valkey
-    version: 6.0.0
+    version: 6.0.2
     condition: valkey.enabled
     repository: https://charts.bitnami.com/bitnami
   - name: postgresql
