@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.2.3](https://github.com/JeffResc/charts/compare/esphome-0.2.2...esphome-0.2.3) (2026-07-02)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.4.1 ([#146](https://github.com/JeffResc/charts/issues/146)) ([2a9751c](https://github.com/JeffResc/charts/commit/2a9751c1d4e491d245175653c48cab1f4c2105a5))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.4.2 ([#154](https://github.com/JeffResc/charts/issues/154)) ([46c6e83](https://github.com/JeffResc/charts/commit/46c6e83f4eeb67b94d571b45c656a42df7a786be))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.4.3 ([#157](https://github.com/JeffResc/charts/issues/157)) ([f9025c6](https://github.com/JeffResc/charts/commit/f9025c68bde384a7b1e7e1f32c622940055ccf02))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.4.4 ([#163](https://github.com/JeffResc/charts/issues/163)) ([98ca059](https://github.com/JeffResc/charts/commit/98ca0596c0c69f51406e96e78c31151289260f89))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.4.5 ([#167](https://github.com/JeffResc/charts/issues/167)) ([c4a5425](https://github.com/JeffResc/charts/commit/c4a542590f80233f238c30083319770f481b2856))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.5.0 ([#188](https://github.com/JeffResc/charts/issues/188)) ([174de27](https://github.com/JeffResc/charts/commit/174de2759f15fafa6f3cbe4e6465a202e159a951))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.5.1 ([#191](https://github.com/JeffResc/charts/issues/191)) ([06fb814](https://github.com/JeffResc/charts/commit/06fb814566d58c9090396e5da2c7514f0d1afcc5))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.5.2 ([#200](https://github.com/JeffResc/charts/issues/200)) ([f682bee](https://github.com/JeffResc/charts/commit/f682bee7e785ef069deb4114a0d149173b09e3af))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.5.3 ([#203](https://github.com/JeffResc/charts/issues/203)) ([06fc65b](https://github.com/JeffResc/charts/commit/06fc65b4d2105db1682654c39a1418156cc942fe))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.6.0 ([#213](https://github.com/JeffResc/charts/issues/213)) ([a2d96ce](https://github.com/JeffResc/charts/commit/a2d96ce8e8f8b587e7a18f3f656229782210633d))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.6.1 ([#216](https://github.com/JeffResc/charts/issues/216)) ([794c410](https://github.com/JeffResc/charts/commit/794c4103637eb602c28e35c5c5a104642043275a))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.6.2 ([#217](https://github.com/JeffResc/charts/issues/217)) ([071e208](https://github.com/JeffResc/charts/commit/071e2089a47fdc158a53dd633749fef2785a89fc))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.6.3 ([#223](https://github.com/JeffResc/charts/issues/223)) ([a312f39](https://github.com/JeffResc/charts/commit/a312f39da977459e2fb94535b10cc3827aca9fbe))
+* **deps:** update ghcr.io/esphome/esphome docker tag to v2026.6.4 ([#228](https://github.com/JeffResc/charts/issues/228)) ([2694c98](https://github.com/JeffResc/charts/commit/2694c983d63c014af6dcc3c441a536f3647e4ad4))
+
 ## [0.2.2](https://github.com/JeffResc/charts/compare/esphome-0.2.1...esphome-0.2.2) (2026-04-16)
 
 
