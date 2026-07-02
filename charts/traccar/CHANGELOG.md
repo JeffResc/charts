@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.2](https://github.com/JeffResc/charts/compare/traccar-0.2.1...traccar-0.2.2) (2026-07-02)
+
+
+### Miscellaneous
+
+* **deps:** update busybox docker tag to v1.38 ([#190](https://github.com/JeffResc/charts/issues/190)) ([7ad75d7](https://github.com/JeffResc/charts/commit/7ad75d7b9105083ff88ca68291c56df704a2e2bc))
+* **deps:** update traccar/traccar docker tag to v6.13 ([#161](https://github.com/JeffResc/charts/issues/161)) ([cbc27e6](https://github.com/JeffResc/charts/commit/cbc27e6fffb3a1e51db0050274844beb2ee28dbf))
+* **deps:** update traccar/traccar docker tag to v6.14 ([#197](https://github.com/JeffResc/charts/issues/197)) ([ddc3bd5](https://github.com/JeffResc/charts/commit/ddc3bd575f28d241e876226b3efde744884ad762))
+
 ## [0.2.1](https://github.com/JeffResc/charts/compare/traccar-0.2.0...traccar-0.2.1) (2026-04-02)
 
 
