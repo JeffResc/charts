@@ -28,4 +28,4 @@ version: 0.2.0
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "2026.1.4" # renovate: image=ghcr.io/sharevb/it-tools
+appVersion: "2026.7.11" # renovate: image=ghcr.io/sharevb/it-tools
