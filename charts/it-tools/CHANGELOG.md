@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/it-tools-0.2.0...it-tools-0.2.1) (2026-07-23)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/sharevb/it-tools docker tag to v2026.7.11 ([#238](https://github.com/JeffResc/charts/issues/238)) ([e4df133](https://github.com/JeffResc/charts/commit/e4df1337664a9148e3265301f0dfb2a30ad643ce))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/it-tools-0.1.4...it-tools-0.2.0) (2026-04-02)
 
 
