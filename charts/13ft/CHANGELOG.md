@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/13ft-0.2.0...13ft-0.2.1) (2026-07-23)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/wasi-master/13ft docker tag to v0.4.0 ([#177](https://github.com/JeffResc/charts/issues/177)) ([e8630bc](https://github.com/JeffResc/charts/commit/e8630bcf6b91972250cef6de8bd03428f852b663))
+* **deps:** update ghcr.io/wasi-master/13ft docker tag to v0.4.1 ([#240](https://github.com/JeffResc/charts/issues/240)) ([661ce96](https://github.com/JeffResc/charts/commit/661ce96fd0ccdccde5e1c4dd23873346a9526d7b))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/13ft-0.1.1...13ft-0.2.0) (2026-04-02)
 
 
