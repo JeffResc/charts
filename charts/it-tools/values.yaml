@@ -53,7 +53,7 @@ metrics:
     # -- Metrics Container image pull policy
     pullPolicy: IfNotPresent
     # -- Overrides the metrics image tag
-    tag: "1.5.1"
+    tag: "1.5.3"
   # -- Metrics container command arguments
   args:
     - --nginx.scrape-uri=http://localhost:8081/stub_status
