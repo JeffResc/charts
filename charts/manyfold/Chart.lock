@@ -1,9 +1,9 @@
 dependencies:
 - name: valkey
   repository: https://charts.bitnami.com/bitnami
-  version: 6.2.13
+  version: 6.2.16
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 18.8.13
-digest: sha256:5cf5526c9b7a8410c326c70001fc183793b002fc210592fe1f618f25f9a0729c
-generated: "2026-08-27T15:08:29.795742077Z"
+digest: sha256:5d48b8b8b97feef48bc2827e5f3785df22b576622f8df746e1b5e960c1e55ec6
+generated: "2026-09-01T09:48:42.936780863Z"
