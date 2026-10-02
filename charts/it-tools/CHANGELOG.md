@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.1](https://github.com/JeffResc/charts/compare/it-tools-0.2.0...it-tools-0.2.1) (2026-10-02)
+
+
+### Miscellaneous
+
+* **deps:** update ghcr.io/sharevb/it-tools docker tag to v2026.7.11 ([#238](https://github.com/JeffResc/charts/issues/238)) ([e4df133](https://github.com/JeffResc/charts/commit/e4df1337664a9148e3265301f0dfb2a30ad643ce))
+* **deps:** update ghcr.io/sharevb/it-tools docker tag to v2026.9.27 ([#307](https://github.com/JeffResc/charts/issues/307)) ([865f8c4](https://github.com/JeffResc/charts/commit/865f8c490f6ba2b919c180ac16b003f51ea21d8b))
+* **deps:** update nginx/nginx-prometheus-exporter docker tag to v1.5.3 ([#266](https://github.com/JeffResc/charts/issues/266)) ([f769929](https://github.com/JeffResc/charts/commit/f76992967b731d662c5e6f56276c57dda02c6efa))
+
 ## [0.2.0](https://github.com/JeffResc/charts/compare/it-tools-0.1.4...it-tools-0.2.0) (2026-04-02)
 
 
